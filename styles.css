@@ -1,0 +1,147 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #b1d4e5;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+  }
+
+  header {
+    background-color: #123962;
+    color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  nav li {
+    float: left;
+  }
+
+  nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin: 0 10px;
+    font-size: 15px;
+  }
+
+  nav li a:hover {
+    background-color: #ddd;
+    color: #000;
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    max-width: 1000px;
+    min-width: 900px;
+    align-self: center;
+    justify-self: center;
+    background-color: #ffffff;
+  }
+
+  section {
+    border-bottom: 0.5px solid #ddd;
+    width: 80%;
+    padding: 30px;
+    align-self: center;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: larger;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  p {
+    text-align: justify;
+  }
+ 
+
+  footer {
+    background-color: #123962;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  a {
+    color: #0078d7;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: #004b8d;
+  }
+
+  .title {
+    font-size: 30px;
+    margin: 8px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .rodape {
+    font-size: 15px;
+    width: 80%;
+    margin: 5px;
+  }
+  .rodapeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+  font-weight: bold;
+}

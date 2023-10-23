@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain Website</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h3 class="title">BLOCKCHAIN</h3>
+      <nav>
+        <ul>
+          <li><a href="index.html">1. Introdução</a></li>
+          <li><a href="revisao.html">2. Revisão da literatura</a></li>
+          <li>
+            <a href="fundamentos.html">3. Fundamentos da Blockchain</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="tecnologias.html">4. Tecnologias e Protocolos</a>
+          </li>
+          <li>
+            <a href="aplicacoes.html">5. Aplicações e Casos de Uso</a>
+          </li>
+          <li><a href="referencias.html">6. Referências</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="blockchain-fundamentals">
+        <h1>3. Fundamentos da Blockchain</h1>
+        <h2>3.1 Como funciona</h2>
+
+        <p>
+          A blockchain é uma tecnologia de registro distribuído que permite o
+          compartilhamento seguro e transparente de informações em uma rede de
+          computadores. Ela é composta por uma série de blocos que contêm
+          informações sobre transações e outros dados relevantes. Cada bloco é
+          conectado ao bloco anterior, formando uma cadeia de blocos, ou
+          blockchain.
+        </p>
+        <p>
+          Na prática, todo novo bloco criado na blockchain guarda uma informação
+          do anterior, formando uma longa cadeia. Para imaginar essa estrutura,
+          pense em vários quadrados – preenchidos com data, hora, números e
+          letras – conectados um ao outro por meio de correntes.
+        </p>
+        <p>
+          Uma transação na rede Blockchain, por exemplo, segue as seguintes
+          etapas:
+        </p>
+        <ul>
+          <li>
+            <span>Iniciação da transação:</span> O remetente inicia a transação
+            indicando a intenção de transferir valor para o destinatário.
+          </li>
+          <li>
+            <span>Assinatura digital: </span> O remetente cria uma assinatura
+            digital exclusiva usando sua chave privada para autenticar a
+            transação.
+          </li>
+          <li>
+            <span>Propagação na rede:</span> A transação assinada é enviada para
+            os nós da rede blockchain para verificação.
+          </li>
+          <li>
+            <span>Mineração:</span> Os mineradores competem para resolver um
+            problema matemático e o vencedor adiciona o bloco contendo a
+            transação à cadeia.
+          </li>
+          <li>
+            <span>Verificação e consenso:</span> Os nós verificam a validade da
+            transação e chegam a um consenso sobre a inclusão do bloco na
+            blockchain.
+          </li>
+          <li>
+            <span>Adição à blockchain:</span> O bloco validado é adicionado à
+            blockchain existente, formando uma cadeia contínua de blocos.
+          </li>
+          <li>
+            <span>Confirmação da transação: </span>A transação é confirmada,
+            permitindo que o destinatário acesse os fundos transferidos.
+          </li>
+        </ul>
+        <div class="imgContainer">
+          <img src="./howitworks.webp" alt="" />
+          <p class="description">Fonte: LiveCoins¹</p>
+        </div>
+
+        <h2>3.2 Elementos-Chave: Blocos, Transações e Cadeias de Blocos</h2>
+        <p>
+          Os elementos-chave da blockchain são os blocos, as transações e as
+          cadeias de blocos. Os blocos são os componentes básicos da blockchain
+          e contêm informações sobre as transações que ocorrem na rede. As
+          transações são as ações que ocorrem na rede, como a transferência de
+          criptomoedas de uma carteira para outra. As cadeias de blocos são as
+          sequências de blocos que formam a blockchain.
+        </p>
+
+        <p>
+          Cada bloco contém um registro de transações, um hash do bloco anterior
+          e um hash próprio, que seria uma sequência de caracteres gerada por um
+          algoritmo que transforma os dados do bloco em uma sequência de
+          caracteres alfanuméricos. O hash do bloco anterior garante a
+          integridade da cadeia de blocos, pois qualquer alteração em um bloco
+          anterior afetaria todos os blocos subsequentes.
+        </p>
+        <div class="imgContainer">
+          <img src="./estutura básica.jpg" alt="" />
+          <p class="description">Fonte: Dicionário Financeiro²</p>
+        </div>
+        <h2>3.3 Algoritmos de Consenso</h2>
+        <p>
+          Os algoritmos de consenso são os mecanismos que garantem que as
+          transações na blockchain sejam válidas e que os blocos sejam
+          adicionados à cadeia de blocos de forma segura e confiável. Existem
+          vários algoritmos de consenso, incluindo o Proof of Work (PoW) e o
+          Proof of Stake (PoS).
+        </p>
+        <h3>3.3.1 Proof of Work (PoW)</h3>
+        <p>
+          O Proof of Work é o algoritmo de consenso mais utilizado na blockchain
+          do Bitcoin. Ele exige que os nodes da rede resolvam problemas
+          matemáticos complexos para validar as transações e adicionar novos
+          blocos à cadeia de blocos, processo conhecido como mineração. O
+          objetivo da mineração é garantir que as transações na blockchain sejam
+          válidas e que os blocos sejam adicionados à cadeia de blocos de forma
+          segura e confiável.
+        </p>
+        <p>
+          O processo de mineração é intensivo em recursos computacionais e
+          consome muita energia, o que levou a críticas sobre o impacto
+          ambiental da mineração de criptomoedas baseadas em PoW. No entanto, o
+          PoW é considerado por muitos como uma das alternativas mais seguras.
+        </p>
+        <h3>3.3.2 Proof of Stake (PoS)</h3>
+        <p>
+          O Proof of Stake foi criado como uma alternativa ao PoW. Ele é usado
+          em muitos projetos de altcoins e é considerado mais eficiente em
+          termos de energia do que o PoW. No PoS, os validadores dependem de
+          seus patrimônios (holdings) de criptomoedas para validar as transações
+          e adicionar novos blocos à cadeia de blocos. Não há mineradores em
+          blockchains PoS.
+        </p>
+        <p>
+          O PoS tem o mesmo objetivo do PoW de obter consenso na blockchain, mas
+          usa uma maneira diferente para determinar quem valida um bloco de
+          transações. Em vez de depender de computadores poderosos para competir
+          pelos direitos de validação de bloco, os validadores do PoS dependem
+          de seus patrimônios.
+        </p>
+        <p>
+          Por outro lado, o PoW é considerado por muitos como uma das
+          alternativas mais seguras, enquanto o PoS ainda é relativamente novo e
+          sua segurança não é tão estabelecida quanto a do PoW.
+        </p>
+        <div class="imgContainer">
+          <img src="./powpos.png" alt="" />
+          <p class="description">Fonte: CoinDesk³</p>
+        </div>
+      </section>
+      <div class="rodapeContainer">
+        <p class="rodape">
+          ¹Disponível em:
+          <a
+            class="link"
+            href="https://livecoins.com.br/blockchain-descomplicado/"
+          >
+            https://livecoins.com.br/blockchain-descomplicado/
+          </a>
+        </p>
+        <p class="rodape">
+          ²Disponível em:
+          <a
+            class="link"
+            href="https://www.dicionariofinanceiro.com/blockchain/"
+          >
+            https://www.dicionariofinanceiro.com/blockchain/
+          </a>
+        </p>
+        <p class="rodape">
+          ³Disponível em:
+          <a
+            class="link"
+            href="https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/"
+          >
+            https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/
+          </a>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright © 2023. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

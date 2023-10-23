@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain Website</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h3 class="title">BLOCKCHAIN</h3>
+      <nav>
+        <ul>
+          <li><a href="index.html">1. Introdução</a></li>
+          <li><a href="revisao.html">2. Revisão da literatura</a></li>
+          <li>
+            <a href="fundamentos.html">3. Fundamentos da Blockchain</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="tecnologias.html">4. Tecnologias e Protocolos</a>
+          </li>
+          <li>
+            <a href="aplicacoes.html">5. Aplicações e Casos de Uso</a>
+          </li>
+          <li><a href="referencias.html">6. Referências</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="related-technologies-and-protocols">
+        <h1>4. Tecnologias e Protocolos Relacionados</h1>
+        <h2>4.1 Criptografia e Segurança na Blockchain</h2>
+        <p>
+          A criptografia é um dos principais fatores que garantem a resiliência
+          da blockchain a invasões e ataques maliciosos. Com isso, ela é usada
+          para vários propósitos na blockchain, como desenvolver a troca segura
+          de dados entre dois nós, proteger dados em contratos inteligentes e
+          garantir a imutabilidade e segurança de registros no blockchain.
+        </p>
+        <p>
+          Existem três tipos de métodos principais de criptografia: simétrico,
+          assimétrico e hash. A tecnologia blockchain usa principalmente os dois
+          últimos métodos supracitados.
+        </p>
+        <p>
+          Alguns exemplos de uso dos métodos de criptografia em diferentes
+          aspectos do blockchain, são:
+        </p>
+        <ul>
+          <li>
+            Transações entre nós (por exemplo, compra e venda de moedas e
+            tokens): assimétrica
+          </li>
+          <li>Mineração/Verificação de transações: hash</li>
+          <li>Imutabilidade/segurança de registros no blockchain: hash</li>
+          <li>Proteção de dados em contratos inteligentes: hash</li>
+        </ul>
+        <h2>4.2 Árvore de Merkel</h2>
+        <p>
+          A Árvore de Merkle é uma estrutura que viabiliza a verificação simples
+          da presença de uma determinada informação em um local específico,
+          especialmente quando lidamos com um volume considerável de dados.
+        </p>
+        <p>
+          A ideia consiste em uma árvore composta por várias camadas, com o
+          objetivo de conectar cada nó a uma única raiz associada a eles. Para
+          isso, cada nó é identificado por um identificador exclusivo, conhecido
+          como hash. Esses nós iniciais, chamados de nós folha, são então
+          ligados a um nó superior, chamado de nó pai ou ramificação. O nó pai
+          possui um identificador exclusivo que resulta do hash dos seus nós
+          filhos. Esse padrão se repete até chegar ao nó raiz ou raiz Merkle,
+          cujo hash é associado a todos os nós da árvore.
+        </p>
+        <p>
+          Graças a essa estrutura singular, as árvores Merkle permitem
+          relacionar uma grande quantidade de dados a um único ponto, a Raiz
+          Merkle. Dessa forma, para verificar a presença de uma determinada
+          informação em uma posição específica da árvore, basta que o usuário
+          possua o hash da raiz, fornecido por uma fonte confiável. A parte
+          investigada só precisa enviar os hashes complementares ao longo do
+          caminho que percorre da folha até a raiz.
+        </p>
+        <div class="imgContainer">
+          <img src="./arvoreMerkel.webp" alt="" />
+          <p class="description">Fonte: Bit2me¹</p>
+        </div>
+        <h2>4.3 Contratos Inteligentes</h2>
+        <p>
+          Os contratos inteligentes são programas de computador que executam
+          automaticamente os termos de um contrato quando certas condições são
+          atendidas. Eles são executados na blockchain e são imutáveis e
+          transparentes. Os contratos inteligentes são uma das principais
+          aplicações da tecnologia blockchain e têm o potencial de transformar
+          muitos setores, incluindo finanças, imóveis e saúde.
+        </p>
+
+        <p>
+          Esses são escritos em linguagens de programação específicas em
+          diferentes redes, principalmente no mercado financeiro. Devido a sua
+          transparência, todas as partes envolvidas no contrato podem ver e
+          verificar as transações. Sua execução é automática também elimina a
+          necessidade de intermediários e reduz os custos e o tempo necessários
+          para concluir transações.
+        </p>
+        <p>
+          Devido às facilidades e benefícios trazidos, os contratos inteligentes
+          tem sido usados para criar novos modelos de negócios e melhorar a
+          eficiência e transparência das transações atuais em mercados já
+          consolidados.
+        </p>
+        <div class="imgContainer">
+          <img src="./contratosint.png" alt="" />
+          <p class="description">Fonte: Blockgeeks²</p>
+        </div>
+
+        <h2>4.4 Protocolos</h2>
+        <p>
+          O termo "protocolo da blockchain" é usado para se referir a diversas
+          plataformas de blockchain que podem ser utilizadas para o
+          desenvolvimento de aplicações. Cada protocolo é projetado de acordo
+          com os princípios fundamentais da rede, adaptando-se a aplicações e
+          setores específicos. Abaixo estão fornecidos exemplos:
+        </p>
+        <h3>4.4.1 Hyperledger Fabric</h3>
+        <p>
+          O Hyperledger Fabric é um projeto de código aberto que oferece um
+          conjunto de ferramentas e bibliotecas. Empresas podem utilizá-lo para
+          criar rapidamente aplicações de blockchain privada de forma eficiente.
+          Esse protocolo é um framework versátil, fornecendo recursos exclusivos
+          de gerenciamento de identidades e controle de acesso. Isso o torna
+          adequado para uma variedade de aplicações, como rastreamento e
+          monitoramento de cadeias de suprimento, finanças comerciais, programas
+          de fidelidade, lealdade e liquidação de ativos financeiros.
+        </p>
+        <h3>4.4.2 Ethereum</h3>
+        <p>
+          O Ethereum é uma plataforma de blockchain descentralizada de código
+          aberto, utilizada para criar aplicações públicas. O Ethereum
+          Enterprise foi criado para atender a casos de uso comerciais
+          específicos. Além disso, ganhou popularidade pela criptomoeda
+          Ether(ETH), que é a segunda maior criptomoeda em capitalização de
+          mercado, atrás apenas do Bitcoin.
+        </p>
+
+        <h3>4.4.3 Corda</h3>
+        <p>
+          A Corda é um projeto de blockchain de código aberto desenvolvido para
+          empresas. Com a Corda, é possível criar redes blockchain
+          interoperáveis que realizam transações com rigorosa privacidade. As
+          empresas podem aproveitar a tecnologia de contratos inteligentes para
+          realizar transações diretas de valor. As instituições financeiras são
+          os principais usuários da Corda.
+        </p>
+
+        <h3>4.4.4 Quorum</h3>
+        <p>
+          A Quorum é um protocolo de blockchain de código aberto derivado do
+          Ethereum. Ele foi especialmente projetado para uso em redes blockchain
+          privadas, onde um único membro possui todos os nós, ou em redes
+          blockchain de consórcio, onde cada membro da rede possui uma parte da
+          propriedade.
+        </p>
+
+        <h2>4.5 Tipos de Redes de Blockchain</h2>
+        <p>
+          Existem dois tipos principais de redes blockchain: públicas e
+          privadas.
+        </p>
+        <p>
+          As redes públicas são abertas e qualquer pessoa pode participar da
+          validação de transações e da mineração. Além disso, essas são
+          descentralizadas e não são controladas por nenhuma instituição
+          financeira ou governo.
+        </p>
+        <p>
+          As redes privadas, por outro lado, são controladas por uma única
+          entidade, sendo principalmente empresas e organizações que desejam
+          usar a tecnologia para melhorar a eficiência e a segurança de suas
+          operações internas.
+        </p>
+        <p>
+          Ao fazer um comparativo, pode-se afirmar que as redes públicas tendem
+          a ser mais seguras que as privadas, visto que são descentralizadas,
+          fato que permite que não haja um ponto central de vulnerabilidade. No
+          entanto, é notável também que as redes públicas são mais lentas e
+          consomem mais energia.
+        </p>
+      </section>
+      <div class="rodapeContainer">
+        <p class="rodape">
+          ¹Disponível em:
+          <a
+            class="link"
+            href="https://academy.bit2me.com/pt/que-es-un-arbol-merkle/"
+          >
+            https://academy.bit2me.com/pt/que-es-un-arbol-merkle/
+          </a>
+        </p>
+        <p class="rodape">
+          ²Disponível em:
+          <a
+            class="link"
+            href="https://www.jusbrasil.com.br/artigos/smart-contract-uma-analise-juridica/580862497"
+          >
+            https://www.jusbrasil.com.br/artigos/smart-contract-uma-analise-juridica/580862497
+          </a>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright © 2023. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
