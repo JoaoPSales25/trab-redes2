@@ -34,166 +34,95 @@
     </header>
     <main>
       <section id="related-technologies-and-protocols">
-        <h1>4. Tecnologias e Protocolos Relacionados</h1>
-        <h2>4.1 Criptografia e Segurança na Blockchain</h2>
+        <h1>3. Como funciona
+        </h1>
+        <h2>3.1 Integração do Segment Routing com protocolos de roteamento tradicionais (por exemplo, OSPF e BGP).
+          
+          </h2>
+          <h3>3.1.1 Integração com OSPF (Open Shortest Path First):</h3>
         <p>
-          A criptografia é um dos principais fatores que garantem a resiliência
-          da blockchain a invasões e ataques maliciosos. Com isso, ela é usada
-          para vários propósitos na blockchain, como desenvolver a troca segura
-          de dados entre dois nós, proteger dados em contratos inteligentes e
-          garantir a imutabilidade e segurança de registros no blockchain.
+          O OSPF é um protocolo de roteamento interno altamente confiável e eficaz usado para determinar os caminhos mais curtos dentro de uma rede. Ele calcula esses caminhos com base em métricas específicas, como largura de banda, atraso e custo. No entanto, em redes onde a granularidade do roteamento precisa ser aprimorada para atender a requisitos específicos, a integração com o Segment Routing se torna uma solução atraente.
+
+
         </p>
         <p>
-          Existem três tipos de métodos principais de criptografia: simétrico,
-          assimétrico e hash. A tecnologia blockchain usa principalmente os dois
-          últimos métodos supracitados.
+          Nesse cenário, o Segment Routing é utilizado para criar segmentos de encaminhamento dinâmicos. Cada segmento representa um trecho específico do caminho de um pacote através da rede. A criação desses segmentos pode ser baseada em políticas de roteamento ou em necessidades em tempo real, como a otimização da qualidade de serviço (QoS) para aplicativos críticos. Em vez de depender de tabelas de encaminhamento estáticas, a rede determina dinamicamente como o tráfego será roteado com base em segmentos definidos de maneira flexível.
+
         </p>
         <p>
-          Alguns exemplos de uso dos métodos de criptografia em diferentes
-          aspectos do blockchain, são:
+          Essa integração permite que as redes continuem a se beneficiar das vantagens de escalabilidade e estabilidade do OSPF, ao mesmo tempo em que adicionam a capacidade de definir caminhos de encaminhamento altamente personalizados. Isso é particularmente valioso em ambientes de redes de data center, onde as necessidades de balanceamento de carga, recuperação de desastres e otimização de tráfego podem ser muito específicas.
+
         </p>
-        <ul>
-          <li>
-            Transações entre nós (por exemplo, compra e venda de moedas e
-            tokens): assimétrica
-          </li>
-          <li>Mineração/Verificação de transações: hash</li>
-          <li>Imutabilidade/segurança de registros no blockchain: hash</li>
-          <li>Proteção de dados em contratos inteligentes: hash</li>
-        </ul>
-        <h2>4.2 Árvore de Merkel</h2>
+        
+        <h3>3.1.2 Integração com BGP (Border Gateway Protocol):</h2>
         <p>
-          A Árvore de Merkle é uma estrutura que viabiliza a verificação simples
-          da presença de uma determinada informação em um local específico,
-          especialmente quando lidamos com um volume considerável de dados.
+          O BGP é um protocolo de roteamento externo fundamental para redes de provedores de serviços de Internet, onde a troca de rotas entre sistemas autônomos é essencial. No entanto, em redes de grande escala, a flexibilidade do BGP pode ser estendida com o uso do Segment Routing.
         </p>
         <p>
-          A ideia consiste em uma árvore composta por várias camadas, com o
-          objetivo de conectar cada nó a uma única raiz associada a eles. Para
-          isso, cada nó é identificado por um identificador exclusivo, conhecido
-          como hash. Esses nós iniciais, chamados de nós folha, são então
-          ligados a um nó superior, chamado de nó pai ou ramificação. O nó pai
-          possui um identificador exclusivo que resulta do hash dos seus nós
-          filhos. Esse padrão se repete até chegar ao nó raiz ou raiz Merkle,
-          cujo hash é associado a todos os nós da árvore.
+          A integração do Segment Routing com o BGP envolve a definição de segmentos de encaminhamento que podem ser anunciados como parte das atualizações de roteamento do BGP. Esses segmentos representam caminhos personalizados através da rede e podem ser usados para otimizar o roteamento do tráfego com base em políticas específicas da rede. Isso é particularmente valioso quando se trata de roteamento de tráfego entre sistemas autônomos, onde as decisões de roteamento precisam ser altamente personalizadas para atender às demandas variadas dos clientes e dos serviços.
+
         </p>
         <p>
-          Graças a essa estrutura singular, as árvores Merkle permitem
-          relacionar uma grande quantidade de dados a um único ponto, a Raiz
-          Merkle. Dessa forma, para verificar a presença de uma determinada
-          informação em uma posição específica da árvore, basta que o usuário
-          possua o hash da raiz, fornecido por uma fonte confiável. A parte
-          investigada só precisa enviar os hashes complementares ao longo do
-          caminho que percorre da folha até a raiz.
+          A integração do Segment Routing com o BGP proporciona um maior controle sobre o roteamento do tráfego, o que é essencial em redes de provedores de serviços de Internet e ambientes complexos onde a personalização das rotas é uma prioridade. Permite uma otimização mais refinada do desempenho e da utilização de recursos em redes de grande porte.
+
         </p>
-        <div class="imgContainer">
-          <img src="./arvoreMerkel.webp" alt="" />
-          <p class="description">Fonte: Bit2me¹</p>
-        </div>
-        <h2>4.3 Contratos Inteligentes</h2>
+        
+        
+        <h2>3.2 MPLS (Multiprotocol Label Switching) e sua relação com o Segment Routing.
+        </h2>
         <p>
-          Os contratos inteligentes são programas de computador que executam
-          automaticamente os termos de um contrato quando certas condições são
-          atendidas. Eles são executados na blockchain e são imutáveis e
-          transparentes. Os contratos inteligentes são uma das principais
-          aplicações da tecnologia blockchain e têm o potencial de transformar
-          muitos setores, incluindo finanças, imóveis e saúde.
+          MPLS (Multiprotocol Label Switching) é uma tecnologia de encaminhamento que utiliza rótulos (labels) para direcionar o tráfego de forma eficiente em redes de computadores. Esses rótulos são, essencialmente, identificadores numéricos usados para instruir os dispositivos de rede sobre como encaminhar os pacotes. Quando um pacote ingressa na rede, recebe um rótulo, que é trocado conforme o pacote atravessa os dispositivos de rede. Isso ocorre até que o pacote alcance seu destino. No contexto do MPLS, os rótulos funcionam como marcadores de caminho, determinando o curso dos pacotes.
         </p>
 
         <p>
-          Esses são escritos em linguagens de programação específicas em
-          diferentes redes, principalmente no mercado financeiro. Devido a sua
-          transparência, todas as partes envolvidas no contrato podem ver e
-          verificar as transações. Sua execução é automática também elimina a
-          necessidade de intermediários e reduz os custos e o tempo necessários
-          para concluir transações.
-        </p>
-        <p>
-          Devido às facilidades e benefícios trazidos, os contratos inteligentes
-          tem sido usados para criar novos modelos de negócios e melhorar a
-          eficiência e transparência das transações atuais em mercados já
-          consolidados.
-        </p>
-        <div class="imgContainer">
-          <img src="./contratosint.png" alt="" />
-          <p class="description">Fonte: Blockgeeks²</p>
-        </div>
+         
+MPLS é composto por dois tipos principais de roteadores: Label Edge Routers (LER), que são responsáveis por atribuir rótulos aos pacotes, e Label Switch Routers (LSR), que realizam a comutação dos rótulos. Para ilustrar, imagine que os LERs são como as portas de entrada para a rede e os LSRs como as estações intermediárias no trajeto dos pacotes. A tecnologia MPLS inicia e termina em um LER, e, em cenários de redes VPN, o LER é chamado de Provider Edge, pois realiza a pesquisa de rotas IP. Os LSRs, por outro lado, retransmitem os pacotes com rótulos MPLS e realizam a pesquisa desses rótulos.
 
-        <h2>4.4 Protocolos</h2>
-        <p>
-          O termo "protocolo da blockchain" é usado para se referir a diversas
-          plataformas de blockchain que podem ser utilizadas para o
-          desenvolvimento de aplicações. Cada protocolo é projetado de acordo
-          com os princípios fundamentais da rede, adaptando-se a aplicações e
-          setores específicos. Abaixo estão fornecidos exemplos:
         </p>
-        <h3>4.4.1 Hyperledger Fabric</h3>
         <p>
-          O Hyperledger Fabric é um projeto de código aberto que oferece um
-          conjunto de ferramentas e bibliotecas. Empresas podem utilizá-lo para
-          criar rapidamente aplicações de blockchain privada de forma eficiente.
-          Esse protocolo é um framework versátil, fornecendo recursos exclusivos
-          de gerenciamento de identidades e controle de acesso. Isso o torna
-          adequado para uma variedade de aplicações, como rastreamento e
-          monitoramento de cadeias de suprimento, finanças comerciais, programas
-          de fidelidade, lealdade e liquidação de ativos financeiros.
+          Em um ambiente MPLS, um pacote é encaminhado usando rótulos de fluxo (Flow Labels), que são adicionados aos pacotes que entram na rede, geralmente originados em uma rede não-MPLS, como uma LAN. Cada roteador na rede mantém sua própria tabela de roteamento, enquanto os LERs possuem uma tabela de encaminhamento de rótulos (Label Forwarding Table), que associa rótulos a endereços IP de destino.
         </p>
-        <h3>4.4.2 Ethereum</h3>
+    <p>
+      A necessidade de maior flexibilidade e controle sobre o comportamento da rede, em oposição a uma infraestrutura de rede IP pura, deu origem ao Segment Routing (SR). O MPLS oferece vantagens em termos de flexibilidade, permitindo que políticas de roteamento personalizadas sejam implementadas com mais facilidade e que pacotes sigam caminhos predefinidos com base em rótulos específicos. No entanto, o MPLS também traz consigo um aumento nos custos de manutenção devido a um plano de controle mais complexo.
+
+    </p>
+    <p>
+      
+O Segment Routing, por outro lado, introduz uma arquitetura de roteamento mais flexível e escalável, tornando-se menos complexo de operar do que as abordagens tradicionais do MPLS e do roteamento IP. O SR não requer a implementação de protocolos adicionais, como LDP ou RSVP-TE, e utiliza um protocolo de controle IGP para distribuir as marcações e calcular caminhos, o que economiza recursos.
+
+    </p>
+    <p>
+      
+Para simplificar, o Segment Routing é uma evolução do MPLS, onde os rótulos MPLS são usados como segmentos de encaminhamento, permitindo maior controle e flexibilidade no roteamento do tráfego. Essa abordagem melhora a eficiência e a adaptabilidade da rede, ao mesmo tempo em que reduz a complexidade operacional em comparação com as soluções puramente baseadas em MPLS.
+
+    </p>
+        <h2>3.3 Outros protocolos que podem ser usados em conjunto com o Segment Routing.
+        </h2>
+       
+        <h3>3.3.1 ISIS (Intermediate System to Intermediate System):</h3>
         <p>
-          O Ethereum é uma plataforma de blockchain descentralizada de código
-          aberto, utilizada para criar aplicações públicas. O Ethereum
-          Enterprise foi criado para atender a casos de uso comerciais
-          específicos. Além disso, ganhou popularidade pela criptomoeda
-          Ether(ETH), que é a segunda maior criptomoeda em capitalização de
-          mercado, atrás apenas do Bitcoin.
+          O ISIS é um protocolo de roteamento que pode ser usado em conjunto com o Segment Routing para determinar caminhos e segmentos de encaminhamento. Assim como o OSPF, o ISIS é frequentemente empregado para estabelecer segmentos de encaminhamento. Ele fornece uma alternativa ao OSPF em ambientes onde a coexistência de diferentes protocolos é necessária ou desejável.
+
+        </p>
+        <h3>3.3.2 RSVP-TE (Resource Reservation Protocol with Traffic Engineering):</h3>
+        <p>
+          O RSVP-TE é um protocolo que se concentra na engenharia de tráfego e no estabelecimento de caminhos de tráfego explicitamente definidos. Quando usado em conjunto com o Segment Routing, o RSVP-TE pode aprimorar o gerenciamento de recursos da rede. Ele permite a reserva de recursos específicos para o tráfego, garantindo que a qualidade de serviço (QoS) seja mantida, o que é especialmente importante em redes com requisitos estritos de desempenho.
         </p>
 
-        <h3>4.4.3 Corda</h3>
+        <h3>3.3.3 LDP (Label Distribution Protocol):</h3>
         <p>
-          A Corda é um projeto de blockchain de código aberto desenvolvido para
-          empresas. Com a Corda, é possível criar redes blockchain
-          interoperáveis que realizam transações com rigorosa privacidade. As
-          empresas podem aproveitar a tecnologia de contratos inteligentes para
-          realizar transações diretas de valor. As instituições financeiras são
-          os principais usuários da Corda.
+          O LDP é um protocolo comumente associado ao MPLS (Multiprotocol Label Switching). É usado para distribuir rótulos MPLS na rede. Em ambientes que implementam o Segment Routing sobre MPLS, o LDP pode coexistir com o Segment Routing. Nesse cenário, o LDP pode ser usado para distribuir rótulos MPLS, que também podem ser usados como segmentos de encaminhamento no Segment Routing. Isso permite que redes aproveitem os benefícios do MPLS e do Segment Routing simultaneamente.
         </p>
 
-        <h3>4.4.4 Quorum</h3>
+        <h3>3.3.4 EIGRP (Enhanced Interior Gateway Routing Protocol):</h3>
         <p>
-          A Quorum é um protocolo de blockchain de código aberto derivado do
-          Ethereum. Ele foi especialmente projetado para uso em redes blockchain
-          privadas, onde um único membro possui todos os nós, ou em redes
-          blockchain de consórcio, onde cada membro da rede possui uma parte da
-          propriedade.
+          O EIGRP é um protocolo de roteamento interno desenvolvido pela Cisco. Embora seja menos comum do que OSPF ou BGP, ele pode ser integrado com o Segment Routing. O EIGRP oferece recursos avançados, como a capacidade de criar caminhos personalizados e otimizados para o tráfego. Ao combinar o EIGRP com o Segment Routing, as redes podem personalizar ainda mais o roteamento e o encaminhamento do tráfego, especialmente em ambientes onde o EIGRP já é a escolha de protocolo de roteamento.
         </p>
 
-        <h2>4.5 Tipos de Redes de Blockchain</h2>
-        <p>
-          Existem dois tipos principais de redes blockchain: públicas e
-          privadas.
-        </p>
-        <p>
-          As redes públicas são abertas e qualquer pessoa pode participar da
-          validação de transações e da mineração. Além disso, essas são
-          descentralizadas e não são controladas por nenhuma instituição
-          financeira ou governo.
-        </p>
-        <p>
-          As redes privadas, por outro lado, são controladas por uma única
-          entidade, sendo principalmente empresas e organizações que desejam
-          usar a tecnologia para melhorar a eficiência e a segurança de suas
-          operações internas.
-        </p>
-        <p>
-          Ao fazer um comparativo, pode-se afirmar que as redes públicas tendem
-          a ser mais seguras que as privadas, visto que são descentralizadas,
-          fato que permite que não haja um ponto central de vulnerabilidade. No
-          entanto, é notável também que as redes públicas são mais lentas e
-          consomem mais energia.
-        </p>
+       
       </section>
       <div class="rodapeContainer">
-        <p class="rodape">
+        <!-- <p class="rodape">
           ¹Disponível em:
           <a
             class="link"
@@ -210,7 +139,7 @@
           >
             https://www.jusbrasil.com.br/artigos/smart-contract-uma-analise-juridica/580862497
           </a>
-        </p>
+        </p> -->
       </div>
     </main>
     <footer>

@@ -34,165 +34,110 @@
     </header>
     <main>
       <section id="blockchain-fundamentals">
-        <h1>3. Fundamentos da Blockchain</h1>
-        <h2>3.1 Como funciona</h2>
+        <h1>2. Como funciona</h1>
+        <h2>2.1 Segmentos e sua função na arquitetura do Segment Routing.</h2>
 
         <p>
-          A blockchain é uma tecnologia de registro distribuído que permite o
-          compartilhamento seguro e transparente de informações em uma rede de
-          computadores. Ela é composta por uma série de blocos que contêm
-          informações sobre transações e outros dados relevantes. Cada bloco é
-          conectado ao bloco anterior, formando uma cadeia de blocos, ou
-          blockchain.
+          Os segmentos no contexto do Segment Routing (SR) são um
+          componente-chave que define caminhos específicos em uma rede. Eles
+          representam trechos da rede que um pacote de dados deve percorrer, e
+          são identificados por segment identifiers (SIDs). Cada segmento pode
+          representar um roteador, um conjunto de roteadores ou um serviço
+          específico. A importância dos segmentos no SR reside na sua capacidade
+          de criar caminhos personalizados e flexíveis, permitindo um controle
+          preciso sobre o roteamento dos pacotes em uma rede. Isso oferece
+          benefícios significativos, como a otimização do tráfego, a
+          diferenciação de serviços e a simplificação do gerenciamento de rede.
         </p>
         <p>
-          Na prática, todo novo bloco criado na blockchain guarda uma informação
-          do anterior, formando uma longa cadeia. Para imaginar essa estrutura,
-          pense em vários quadrados – preenchidos com data, hora, números e
-          letras – conectados um ao outro por meio de correntes.
+          Os segmentos permitem uma forma inovadora de roteamento, em que os pacotes de dados podem ser encaminhados ao longo de caminhos predeterminados, direcionados por meio de SIDs. Isso elimina a necessidade de protocolos complexos de roteamento e tabelas de encaminhamento estáticas, simplificando a arquitetura de rede. Além disso, a flexibilidade dos segmentos torna possível criar caminhos segmentados com base em requisitos específicos, como a minimização da latência, a maximização da largura de banda ou a aplicação de políticas de QoS.
+
         </p>
         <p>
-          Uma transação na rede Blockchain, por exemplo, segue as seguintes
-          etapas:
+          Os segmentos desempenham um papel central na capacidade do SR de se adaptar rapidamente a mudanças nas condições da rede e nos requisitos de serviço. Eles permitem a programação centralizada, o que significa que os administradores de rede podem controlar o roteamento de forma eficaz a partir de um ponto central, facilitando a automação e a orquestração de serviços. Em resumo, os segmentos são os blocos de construção fundamentais do Segment Routing, capacitando a arquitetura a oferecer eficiência, flexibilidade e escalabilidade em redes modernas.	
         </p>
-        <ul>
-          <li>
-            <span>Iniciação da transação:</span> O remetente inicia a transação
-            indicando a intenção de transferir valor para o destinatário.
-          </li>
-          <li>
-            <span>Assinatura digital: </span> O remetente cria uma assinatura
-            digital exclusiva usando sua chave privada para autenticar a
-            transação.
-          </li>
-          <li>
-            <span>Propagação na rede:</span> A transação assinada é enviada para
-            os nós da rede blockchain para verificação.
-          </li>
-          <li>
-            <span>Mineração:</span> Os mineradores competem para resolver um
-            problema matemático e o vencedor adiciona o bloco contendo a
-            transação à cadeia.
-          </li>
-          <li>
-            <span>Verificação e consenso:</span> Os nós verificam a validade da
-            transação e chegam a um consenso sobre a inclusão do bloco na
-            blockchain.
-          </li>
-          <li>
-            <span>Adição à blockchain:</span> O bloco validado é adicionado à
-            blockchain existente, formando uma cadeia contínua de blocos.
-          </li>
-          <li>
-            <span>Confirmação da transação: </span>A transação é confirmada,
-            permitindo que o destinatário acesse os fundos transferidos.
-          </li>
-        </ul>
+
+        <h2>2.2 Componentes-chave da arquitetura, como os nós e os segmentos de encaminhamento</h2>
+
+        <p>
+          Em uma rede que utiliza Segment Routing (SR), a conexão entre segmentos e nós é fundamental para o funcionamento eficaz da arquitetura. Cada nó SR atua como um ponto de encaminhamento inteligente, onde os pacotes são direcionados com base em segmentos específicos, que são identificadores de caminhos ou funções na rede. Esses segmentos, associados a um determinado nó, representam destinos ou ações específicas a serem alcançadas. Quando um pacote ingressa em um nó SR, a tabela de encaminhamento SR no nó é consultada para determinar o próximo segmento a ser alcançado, direcionando o pacote para o nó ou link correspondente. Assim, a conexão entre segmentos e nós permite que os pacotes sigam trajetórias definidas com precisão, otimizando o roteamento, a diferenciação de serviços e a automação na rede.
+        </p>
+        <h2>
+          2.3 Tipos de segmentos (uniponto, multiponto, etc.).
+        </h2>
+        <p>
+
+          Uniponto se refere a uma forma de comunicação em que a informação é transmitida de um único ponto de origem para um único ponto de destino. É como uma conversa direta entre duas pessoas, onde uma pessoa fala e a outra escuta, sem envolver terceiros.
+
+        </p>
+        <p>
+          Já Multiponto envolve uma transmissão de um único ponto de origem para múltiplos pontos de destino. Isso significa que um único emissor envia informações que podem ser recebidas por várias pessoas ao mesmo tempo, como uma estação de rádio que transmite músicas para muitos ouvintes.
+Temos também o Multiponto a Multiponto, Nesse caso, a comunicação ocorre de vários pontos de origem para vários pontos de destino. Muitas pessoas podem enviar e receber informações simultaneamente, criando uma rede complexa de comunicação, como em videoconferências em grupo.
+
+        </p>
+        <h2>
+         2.4 Função dos nós intermediários na rede com Segment Routing
+
+        </h2>
+        <p>
+          Os nós intermediários desempenham um papel vital em uma rede que utiliza o Segment Routing (SR). Sua principal função é direcionar o tráfego de pacotes por meio da rede de acordo com os segmentos identificados nos cabeçalhos dos pacotes. Isso permite que os pacotes sigam caminhos específicos e otimizados, contribuindo para a eficiência do roteamento. Além disso, esses nós têm a capacidade de segmentar pacotes maiores em segmentos menores, se necessário, e de recompor pacotes segmentados, garantindo que os segmentos sejam entregues na ordem correta ao destino final.
+
+        </p>
+        <p>
+          Uma das tarefas fundamentais dos nós intermediários é o gerenciamento das tabelas de encaminhamento SR. Cada nó mantém sua própria tabela de encaminhamento que contém informações sobre como direcionar pacotes com base nos segmentos específicos presentes nos pacotes. Os nós atualizam e consultam essas tabelas continuamente, tomando decisões de roteamento com base nessas informações.
+        </p>
+        <p>
+          Além disso, os nós intermediários têm um papel importante no controle de políticas de roteamento. Eles podem aplicar políticas específicas à medida que os pacotes passam por eles, o que possibilita a implementação de restrições, priorização de tráfego, aplicação de políticas de Qualidade de Serviço (QoS) e outras ações de controle relacionadas ao tráfego.
+
+        </p>
+        <p>
+          Esses nós também podem executar funções específicas relacionadas aos segmentos de função, como aplicar serviços de firewall, balanceamento de carga, otimização de tráfego e outras ações personalizadas definidas pelos segmentos de função. Isso torna os nós intermediários elementos-chave na diferenciação de serviços e na otimização do tráfego.
+
+        </p>
+        <p>
+          Por fim, os nós intermediários têm a capacidade de detectar falhas na rede e encaminhar pacotes por caminhos de proteção em caso de problemas. Isso melhora a confiabilidade da rede, garantindo que o tráfego seja redirecionado adequadamente quando ocorrem interrupções. Em suma, os nós intermediários são componentes essenciais na operação do Segment Routing, contribuindo para um roteamento eficiente, flexível e controlado na rede.
+
+        </p>
+<!--         
         <div class="imgContainer">
           <img src="./howitworks.webp" alt="" />
           <p class="description">Fonte: LiveCoins¹</p>
-        </div>
+        </div> -->
 
-        <h2>3.2 Elementos-Chave: Blocos, Transações e Cadeias de Blocos</h2>
-        <p>
-          Os elementos-chave da blockchain são os blocos, as transações e as
-          cadeias de blocos. Os blocos são os componentes básicos da blockchain
-          e contêm informações sobre as transações que ocorrem na rede. As
-          transações são as ações que ocorrem na rede, como a transferência de
-          criptomoedas de uma carteira para outra. As cadeias de blocos são as
-          sequências de blocos que formam a blockchain.
-        </p>
-
-        <p>
-          Cada bloco contém um registro de transações, um hash do bloco anterior
-          e um hash próprio, que seria uma sequência de caracteres gerada por um
-          algoritmo que transforma os dados do bloco em uma sequência de
-          caracteres alfanuméricos. O hash do bloco anterior garante a
-          integridade da cadeia de blocos, pois qualquer alteração em um bloco
-          anterior afetaria todos os blocos subsequentes.
-        </p>
-        <div class="imgContainer">
-          <img src="./estutura básica.jpg" alt="" />
-          <p class="description">Fonte: Dicionário Financeiro²</p>
-        </div>
-        <h2>3.3 Algoritmos de Consenso</h2>
-        <p>
-          Os algoritmos de consenso são os mecanismos que garantem que as
-          transações na blockchain sejam válidas e que os blocos sejam
-          adicionados à cadeia de blocos de forma segura e confiável. Existem
-          vários algoritmos de consenso, incluindo o Proof of Work (PoW) e o
-          Proof of Stake (PoS).
-        </p>
-        <h3>3.3.1 Proof of Work (PoW)</h3>
-        <p>
-          O Proof of Work é o algoritmo de consenso mais utilizado na blockchain
-          do Bitcoin. Ele exige que os nodes da rede resolvam problemas
-          matemáticos complexos para validar as transações e adicionar novos
-          blocos à cadeia de blocos, processo conhecido como mineração. O
-          objetivo da mineração é garantir que as transações na blockchain sejam
-          válidas e que os blocos sejam adicionados à cadeia de blocos de forma
-          segura e confiável.
-        </p>
-        <p>
-          O processo de mineração é intensivo em recursos computacionais e
-          consome muita energia, o que levou a críticas sobre o impacto
-          ambiental da mineração de criptomoedas baseadas em PoW. No entanto, o
-          PoW é considerado por muitos como uma das alternativas mais seguras.
-        </p>
-        <h3>3.3.2 Proof of Stake (PoS)</h3>
-        <p>
-          O Proof of Stake foi criado como uma alternativa ao PoW. Ele é usado
-          em muitos projetos de altcoins e é considerado mais eficiente em
-          termos de energia do que o PoW. No PoS, os validadores dependem de
-          seus patrimônios (holdings) de criptomoedas para validar as transações
-          e adicionar novos blocos à cadeia de blocos. Não há mineradores em
-          blockchains PoS.
-        </p>
-        <p>
-          O PoS tem o mesmo objetivo do PoW de obter consenso na blockchain, mas
-          usa uma maneira diferente para determinar quem valida um bloco de
-          transações. Em vez de depender de computadores poderosos para competir
-          pelos direitos de validação de bloco, os validadores do PoS dependem
-          de seus patrimônios.
-        </p>
-        <p>
-          Por outro lado, o PoW é considerado por muitos como uma das
-          alternativas mais seguras, enquanto o PoS ainda é relativamente novo e
-          sua segurança não é tão estabelecida quanto a do PoW.
-        </p>
-        <div class="imgContainer">
+        
+        <!-- <div class="imgContainer">
           <img src="./powpos.png" alt="" />
           <p class="description">Fonte: CoinDesk³</p>
         </div>
-      </section>
+      </section> -->
       <div class="rodapeContainer">
-        <p class="rodape">
-          ¹Disponível em:
-          <a
-            class="link"
-            href="https://livecoins.com.br/blockchain-descomplicado/"
-          >
-            https://livecoins.com.br/blockchain-descomplicado/
-          </a>
-        </p>
-        <p class="rodape">
-          ²Disponível em:
-          <a
-            class="link"
-            href="https://www.dicionariofinanceiro.com/blockchain/"
-          >
-            https://www.dicionariofinanceiro.com/blockchain/
-          </a>
-        </p>
-        <p class="rodape">
-          ³Disponível em:
-          <a
-            class="link"
-            href="https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/"
-          >
-            https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/
-          </a>
-        </p>
+          <!-- <p class="rodape">
+            ¹Disponível em:
+            <a
+              class="link"
+              href="https://livecoins.com.br/blockchain-descomplicado/"
+            >
+              https://livecoins.com.br/blockchain-descomplicado/
+            </a>
+          </p>
+          <p class="rodape">
+            ²Disponível em:
+            <a
+              class="link"
+              href="https://www.dicionariofinanceiro.com/blockchain/"
+            >
+              https://www.dicionariofinanceiro.com/blockchain/
+            </a>
+          </p>
+          <p class="rodape">
+            ³Disponível em:
+            <a
+              class="link"
+              href="https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/"
+            >
+              https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/
+            </a>
+          </p> -->
       </div>
     </main>
     <footer>
