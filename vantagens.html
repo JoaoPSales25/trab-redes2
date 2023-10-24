@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blockchain Website</title>
+    <title>Segment Routing Website</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -34,56 +34,61 @@
     </header>
     <main>
       <section id="literature-review">
-        <h1>2. Revisão da literatura</h1>
-        <h2>2.1 História da Tecnologia Blockchain</h2>
+        <h1>4. Vantagens</h1>
+        <h2>1. Flexibilidade e Personalização:</h2>
         <p>
-          As discussões sobre tecnologias de registro distribuído (DLT, na sigla
-          em inglês), categoria na qual a blockchain se enquadra, ocorrem desde
-          1991. Naquele ano, o matemático Stuart Haber e o físico W. Scott
-          Stornetta publicaram um artigo sobre o assunto. O trabalho dos dois
-          pesquisadores inclusive é citado por Nakamoto, suposto criador da
-          Blockchain, em seu white paper. Antes do Bitcoin, portanto, não havia
-          registros de casos de uso para a tecnologia. O BTC foi a primeira
-          grande aplicação da blockchain.
+          Uma das principais vantagens do SR em comparação com o roteamento IP
+          convencional é sua flexibilidade. Enquanto o roteamento IP baseia-se
+          em tabelas de roteamento estáticas, o SR permite que os
+          administradores de rede personalizem os caminhos de encaminhamento.
+          Isso é alcançado por meio da definição de segmentos de roteamento que
+          representam etapas específicas em um caminho. Esses segmentos podem
+          ser configurados de acordo com políticas de rede ou necessidades de
+          aplicativos em tempo real. Essa flexibilidade é especialmente valiosa
+          em redes complexas, onde os requisitos de tráfego podem variar
+          amplamente.
         </p>
-
+        <h2>2. Redução do Tempo de Convergência:</h2>
         <p>
-          Com o surgimento do Bitcoin, a blockchain ganhou destaque e se tornou
-          uma das tecnologias mais promissoras da atualidade. A blockchain é a
-          base das criptomoedas, mas também pode ser utilizada em outras
-          aplicações, como a criação de contratos inteligentes e a melhoria da
-          segurança em transações financeiras e de saúde.
+          Em cenários de falha de rede, o SR se destaca na redução do tempo de
+          convergência. Em redes tradicionais, a recuperação após uma falha pode
+          ser demorada, resultando em interrupções no tráfego. O SR permite que
+          os administradores configurem caminhos alternativos e pré-definidos.
+          Em caso de falha, o tráfego pode ser rapidamente redirecionado ao
+          longo de caminhos alternativos, evitando interrupções significativas.
+          Isso é fundamental em ambientes onde a continuidade do serviço é
+          essencial.
         </p>
-        <div class="imgContainer">
-          <img src="./historia.jpg" alt="" />
-          <p class="description">Fonte: Shiksha¹</p>
-        </div>
-        <h2>2.2 Criador da blockchain</h2>
+        <h2>3. Simplificação da Arquitetura de Rede:</h2>
         <p>
-          O criador da blockchain é um indivíduo ou grupo conhecido pelo
-          pseudônimo de Satoshi Nakamoto. Até hoje, a verdadeira identidade por
-          trás desse nome permanece desconhecida. Em 2008, Nakamoto publicou o
-          famoso white paper intitulado "Bitcoin: A Peer-to-Peer Electronic Cash
-          System", que descreveu o conceito revolucionário de uma moeda digital
-          descentralizada e a tecnologia subjacente, conhecida como blockchain.
-          O trabalho de Nakamoto na criação da blockchain estabeleceu as bases
-          para a revolução da criptomoeda e inspirou o desenvolvimento de
-          inúmeras outras aplicações baseadas em blockchain.
+          O SR simplifica a arquitetura de rede, eliminando a necessidade de
+          protocolos complexos, como o LDP (Label Distribution Protocol) e o
+          RSVP-TE (Resource Reservation Protocol with Traffic Engineering). Isso
+          resulta em uma redução significativa da sobrecarga de processamento e
+          da complexidade operacional. A capacidade de combinar o SR com
+          protocolos tradicionais, como OSPF (Open Shortest Path First) e BGP
+          (Border Gateway Protocol), oferece uma maneira suave de adotar a
+          tecnologia em redes existentes, sem a necessidade de uma
+          reestruturação completa.
         </p>
-
+        <h2>4. Melhoria no Controle de Tráfego:</h2>
         <p>
-          A contribuição de Nakamoto para a tecnologia da blockchain foi
-          revolucionária, pois trouxe a ideia de descentralização e confiança
-          distribuída para o mundo digital. Ao projetar a blockchain, Nakamoto
-          resolveu o desafio fundamental da dupla despesa, permitindo a
-          transferência segura de valor sem a necessidade de intermediários. A
-          blockchain se tornou um mecanismo inovador para registrar e verificar
-          transações de forma transparente e imutável, fornecendo uma
-          infraestrutura sólida para várias aplicações, desde criptomoedas até
-          contratos inteligentes. Embora o verdadeiro criador da blockchain
-          permaneça um mistério, seu trabalho teve um impacto duradouro na
-          indústria financeira e tecnológica, abrindo caminho para a
-          transformação digital e inspirando uma nova era de inovação.
+          O SR oferece um nível aprimorado de controle de tráfego. Os
+          administradores podem definir caminhos de encaminhamento precisos,
+          otimizar o tráfego, priorizar fluxos de dados críticos e implementar
+          balanceamento de carga com facilidade. Isso é especialmente valioso em
+          ambientes onde a garantia de qualidade de serviço (QoS) e o
+          direcionamento de tráfego com base em políticas específicas são
+          cruciais.
+        </p>
+        <h2>5. Adaptação Dinâmica às Necessidades da Rede:</h2>
+        <p>
+          O SR é altamente adaptável e permite que as redes se ajustem
+          rapidamente às demandas em constante evolução. À medida que as
+          necessidades de aplicativos e políticas de rede mudam, os
+          administradores podem reconfigurar os segmentos de roteamento para
+          acomodar essas mudanças em tempo real. Isso torna o SR uma escolha
+          poderosa para redes dinâmicas que precisam se adaptar rapidamente.
         </p>
       </section>
       <div class="rodapeContainer">

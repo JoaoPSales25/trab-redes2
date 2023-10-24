@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blockchain Website</title>
+    <title>Segment Routing</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -34,93 +34,168 @@
     </header>
     <main>
       <section id="applications-and-use-cases">
-        <div class="imgContainer">
+        <!-- <div class="imgContainer">
           <img src="./bitcoin.png" alt="" />
           <p class="description">Fonte: André François McKenzie/Unsplash</p>
-        </div>
-        <h1>5. Aplicações e Casos de Uso</h1>
-        <h2>5.1 Blockchain no Setor Financeiro</h2>
-        <p>
-          O setor financeiro é um dos setores que mais se beneficiam da
-          tecnologia blockchain, visto que essa permite transações rápidas e
-          seguras, reduzindo os custos e aumentando a eficiência delas a partir
-          das criptomoedas.
-        </p>
+        </div> -->
+        <h1>5. Aplicações</h1>
+        <section>
+          <h2>
+            Segment Routing em redes de data center: como ele melhora o
+            desempenho.
+          </h2>
+          <p>
+            Em redes de data center, onde a eficiência e o desempenho são
+            fundamentais, o Segment Routing (SR) emerge como uma solução
+            poderosa para aprimorar a infraestrutura de rede. Uma das principais
+            maneiras pelas quais o SR aprimora o desempenho é através da redução
+            da latência. Com a capacidade de criar caminhos personalizados, os
+            pacotes seguem trajetórias mais diretas, minimizando a latência, o
+            que é crucial para aplicações sensíveis ao tempo, como virtualização
+            e armazenamento de dados.
+          </p>
 
-        <p>
-          Além das criptomoedas, a tecnologia blockchain também é usada em
-          outras aplicações financeiras, como remessas internacionais,
-          empréstimos, seguros e investimentos. Com isso, um dos exemplos é a
-          criação de plataformas de empréstimo peer-to-peer, que permitem que os
-          indivíduos emprestem dinheiro uns aos outros sem a necessidade de
-          intermediários.
-        </p>
+          <p>
+            Além disso, o SR permite o balanceamento de carga dinâmico,
+            distribuindo o tráfego de forma equitativa entre os servidores
+            disponíveis. Isso evita a sobrecarga de servidores individuais e
+            melhora a utilização dos recursos, resultando em um desempenho mais
+            consistente e eficiente.
+          </p>
+          <p>
+            A capacidade de criar segmentos de função no SR também desempenha um
+            papel importante na melhoria do desempenho. Isso permite o
+            isolamento de tráfego, garantindo que aplicativos críticos tenham
+            recursos de rede dedicados e não sejam afetados por picos de tráfego
+            em outras partes da rede. Além disso, o SR possibilita a aplicação
+            de políticas de Qualidade de Serviço (QoS), priorizando o tráfego
+            crítico e, assim, aprimorando a experiência do usuário.
+          </p>
+          <p>
+            A automação e a escalabilidade proporcionadas pelo SR são outros
+            fatores essenciais. A capacidade de se adaptar rapidamente às
+            mudanças na topologia da rede e aos requisitos de tráfego simplifica
+            a gestão da rede e reduz a possibilidade de erros humanos. Em um
+            ambiente de data center em constante crescimento, a escalabilidade é
+            crucial para atender às crescentes demandas de tráfego.
+          </p>
 
-        <h2>5.2 Blockchain na Área de Saúde</h2>
-        <p>
-          Para a área da saúde a blockchain tem um potencial transformador,
-          permitindo o compartilhamento seguro e eficiente de informações
-          médicas entre pacientes, médicos e instituições de saúde. Essa
-          tecnologia pode ajudar a resolver muitos dos problemas enfrentados por
-          esse setor, como a falta de interoperabilidade entre sistemas de
-          saúde, a falta de segurança e privacidade dos dados médicos e a falta
-          de transparência nos processos.
-        </p>
-        <p>Algumas aplicações da tecnologia na área da saúde são:</p>
-        <h3>5.2.1 Registros Eletrônicos de Saúde (RES)</h3>
-        <p>
-          Os registros eletrônicos de saúde (RES) são uma das principais
-          aplicações mais promissoras, visto que pode-se utilizar a rede para
-          criar um registro eletrônico de saúde seguro e interoperável que pode
-          ser acessado por pacientes, médicos e instituições de saúde. Esses
-          permitem que os pacientes controlem seus próprios dados médicos e
-          compartilhem esses dados com os médicos e instituições de saúde de sua
-          escolha.
-        </p>
+          <h2>
+            Segment Routing em redes IP/MPLS: como ele aprimora a eficiência do
+            encaminhamento.
+          </h2>
+          <p>
+            Assim como em redes data centers, o segment routing também mostra
+            diversas vantagens quando aplicadas em redes IP/MPLS, algumas dessas
+            vantagens são:
+          </p>
+          <h3>1.Redução de Overhead de Encapsulamento:</h3>
+          <p>
+            O SR elimina a necessidade de encapsulamento complexo que é comum em
+            redes MPLS tradicionais. Em vez de adicionar múltiplas etiquetas de
+            rótulo MPLS aos pacotes, o SR utiliza segmentos no cabeçalho dos
+            pacotes para indicar os caminhos desejados. Isso reduz o overhead de
+            encapsulamento, diminuindo o tamanho dos pacotes e melhorando a
+            eficiência do transporte de dados.
+          </p>
 
-        <h3>5.2.2 Gerenciamento de Suprimentos Médicos</h3>
-        <p>
-          A tecnologia pode ser usada para rastrear e gerenciar suprimentos
-          médicos, desde medicamentos até equipamentos médicos. A blockchain
-          permite que os fornecedores de suprimentos médicos rastreiem a origem
-          dos produtos e garantam a autenticidade dos produtos.
-        </p>
+          <h3>2.Roteamento Mais Direto:</h3>
+          <p>
+            O SR permite que os pacotes sigam caminhos mais diretos na rede.
+            Isso é alcançado através da definição de segmentos que indicam os
+            próximos saltos específicos para cada pacote. Em redes tradicionais,
+            o roteamento pode ser menos eficiente, uma vez que os pacotes
+            precisam seguir caminhos predefinidos, muitas vezes menos
+            otimizados. O SR, com sua flexibilidade de roteamento, reduz a
+            latência e o tempo de entrega.
+          </p>
 
-        <h3>5.2.3 Pesquisa Médica</h3>
-        <p>
-          Por fim, a blockchain pode ser usada para melhorar a pesquisa médica,
-          permitindo que os pesquisadores compartilhem dados de forma segura e
-          eficiente. Além disso, pode ser usada para criar um registro de
-          pesquisa médica descentralizado que pode ser acessado por
-          pesquisadores de todo o mundo. Isso permitiria que os pesquisadores
-          compartilhassem dados de forma segura e eficiente, acelerando a
-          pesquisa médica e melhorando a qualidade dos resultados.
-        </p>
+          <h3>3.Balanceamento de Carga Melhorado:</h3>
+          <p>
+            O SR permite a criação de segmentos de função que direcionam o
+            tráfego para servidores ou serviços específicos. Isso resulta em um
+            balanceamento de carga mais eficaz, distribuindo o tráfego de forma
+            equitativa e direcionando-o para os recursos adequados. Como
+            resultado, os recursos de rede são melhor utilizados, melhorando a
+            eficiência operacional.
+          </p>
 
-        <h2>5.3 Outros Casos de Uso da Blockchain</h2>
-        <p>
-          A blockchain tem o potencial de transformar muitos setores além do
-          financeiro e da saúde. Sendo eles:
-        </p>
-        <h3>5.3.1 Setor de ONGs</h3>
-        <p>
-          A blockchain pode ser usada para aumentar a transparência e a
-          eficiência das ONGs, podendo ser usada para rastrear doações e
-          garantir que elas sejam usadas para os fins pretendidos. Também pode
-          ser usada para criar registros transparentes de projetos e atividades
-          de ONGs.
-        </p>
+          <h3>4.Rede Mais Escalável:</h3>
+          <p>
+            O SR é altamente escalável e facilita a adaptação a mudanças na
+            topologia da rede e nas necessidades de tráfego. A escalabilidade é
+            fundamental em redes MPLS, que muitas vezes precisam acomodar um
+            grande número de dispositivos e serviços. O SR permite uma expansão
+            eficaz da rede, mantendo a eficiência do encaminhamento.
+          </p>
+          <h3>5.Melhor Controle de Políticas de Roteamento:</h3>
+          <p>
+            Os segmentos no SR podem ser usados para implementar políticas de
+            roteamento específicas, permitindo a diferenciação de serviços e a
+            aplicação de políticas de Qualidade de Serviço (QoS). Isso resulta
+            em um melhor controle sobre como o tráfego é tratado na rede,
+            melhorando a eficiência na entrega de serviços.
+          </p>
 
-        <h3>5.3.2 Setor de Startups</h3>
-        <p>
-          Por fim, no setor de startups pode ser usada para criar novos modelos
-          de negócios e produtos em startups, visto que permite que as startups
-          criem produtos e serviços descentralizados e transparentes que podem
-          ser acessados por usuários em todo o mundo. Ademais, essa também pode
-          ser usada para criar novos modelos de financiamento, como as ICOs
-          (Initial Coin Offerings), que permitem que as startups levantem fundos
-          por meio da emissão de tokens.
-        </p>
+          <h2>
+            Segment Routing em redes de provedores de serviços de Internet.
+          </h2>
+          <h3>1. Controle de Tráfego Aprimorado:</h3>
+          <p>
+            Em redes de ISPs, o controle de tráfego é essencial para atender a
+            demandas variadas de clientes. O SR permite que os ISPs personalizem
+            caminhos de encaminhamento para otimizar a entrega de tráfego de
+            acordo com as necessidades específicas. Eles podem configurar
+            segmentos de roteamento precisos que direcionam o tráfego de forma
+            eficiente, garantindo que os serviços de conectividade sejam
+            entregues com qualidade superior.
+          </p>
+          <h3>2. Personalização de Serviços:</h3>
+          <p>
+            Os ISPs enfrentam a tarefa de oferecer uma ampla gama de serviços,
+            desde acesso à Internet residencial até soluções empresariais
+            personalizadas. O SR possibilita a personalização de serviços com
+            base nas necessidades de cada cliente. Segmentos de roteamento podem
+            ser adaptados para atender a requisitos de largura de banda,
+            garantias de desempenho e políticas de rede específicas, permitindo
+            que os ISPs ofereçam serviços diversificados e sob medida.
+          </p>
+          <h3>3. Redundância e Recuperação Rápida:</h3>
+          <p>
+            A alta disponibilidade é crítica para os ISPs, pois qualquer falha
+            na rede pode resultar em interrupções significativas. O SR permite
+            que os ISPs configurem caminhos alternativos e pré-definidos. Em
+            caso de falha, o tráfego pode ser redirecionado rapidamente ao longo
+            desses caminhos alternativos, garantindo uma recuperação eficaz e
+            minimizando os impactos nas operações e na experiência do cliente
+          </p>
+          <h3>4. Escalabilidade:</h3>
+          <p>
+            Para ISPs que atendem a um grande número de clientes e enfrentam
+            crescimento contínuo no tráfego, a escalabilidade é fundamental. O
+            SR é altamente escalável, o que o torna uma escolha ideal para ISPs
+            que precisam expandir suas operações de maneira eficiente e manter
+            um desempenho consistente à medida que a rede cresce.
+          </p>
+          <h3>5. Qualidade de Serviço Aprimorada:</h3>
+          <p>
+            A capacidade de fornecer qualidade de serviço (QoS) é um diferencial
+            crítico para os ISPs. Com o SR, eles podem priorizar fluxos de
+            tráfego críticos, garantindo uma experiência de usuário aprimorada.
+            Isso é especialmente valioso em ambientes onde os clientes têm
+            requisitos específicos de QoS para aplicativos sensíveis, como
+            videoconferência e streaming de vídeo.
+          </p>
+          <h3>6. Adaptação Dinâmica:</h3>
+          <p>
+            Em um ambiente de ISP em constante evolução, o SR oferece a
+            capacidade de se adaptar rapidamente às necessidades da rede. À
+            medida que as demandas dos clientes e os requisitos de aplicativos
+            mudam, os ISPs podem reconfigurar os segmentos de roteamento para
+            acomodar essas mudanças em tempo real, garantindo que a rede
+            permaneça alinhada com as necessidades do mercado.
+          </p>
+        </section>
       </section>
     </main>
     <footer>
