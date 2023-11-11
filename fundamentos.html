@@ -71,13 +71,13 @@
         <h2>Bloco Global de Roteamento por Segmentos (SRGB)</h2>
 
         <p>
-          <strong>SRGB (Segment Routing Global Block):</strong> Rótulos
-          exclusivos para segmentos de Nó (também chamados de globais, dada sua
-          validade absoluta em um domínio de SR). A atribuição de rótulos no
-          SRGB pode ser realizada dentro da faixa de valores compreendida entre
-          16000 e 1048575. A estrutura do rótulo é construída pela combinação do
-          prefixo SID com a base do SRGB. Por exemplo, um roteador com prefixo
-          SID 105 e um SRGB igual a 16000, possui rótulo 16105.
+          <u>SRGB (Segment Routing Global Block):</u> Rótulos exclusivos para
+          segmentos de Nó (também chamados de globais, dada sua validade
+          absoluta em um domínio de SR). A atribuição de rótulos no SRGB pode
+          ser realizada dentro da faixa de valores compreendida entre 16000 e
+          1048575. A estrutura do rótulo é construída pela combinação do prefixo
+          SID com a base do SRGB. Por exemplo, um roteador com prefixo SID 105 e
+          um SRGB igual a 16000, possui rótulo 16105.
         </p>
 
         <div class="imgContainer">
@@ -88,12 +88,12 @@
         <h2>Plano de Controle IGP do SR: IS-IS e OSPF</h2>
 
         <p>
-          <strong>Plano de Controle IGP (Interior Gateway Protocol):</strong>
+          <u>Plano de Controle IGP (Interior Gateway Protocol):</u>
           Desempenha um papel crucial no Segment Routing (SR), sendo responsável
           pela configuração e distribuição dos segmentos.
         </p>
 
-        <h3>IS-IS:</h3>
+        <u>IS-IS:</u>
         <ul>
           <li>Suporte para IPv4 e IPv6.</li>
           <li>
@@ -111,7 +111,7 @@
           </li>
         </ul>
 
-        <h3>OSPF:</h3>
+        <u>OSPF:</u>
         <ul>
           <li>
             Versão que incorpora extensões para Segment Routing é o OSPFv2.
@@ -135,10 +135,10 @@
         </div>
 
         <p>
-          <strong>Redes MPLS com Segment Routing (SR):</strong> Representam uma
-          evolução significativa na arquitetura de comunicação, aproveitando o
-          plano de encaminhamento de dados do MPLS. Esta abordagem destaca-se
-          por várias características distintivas quando comparada a redes MPLS
+          <u>Redes MPLS com Segment Routing (SR):</u> Representam uma evolução
+          significativa na arquitetura de comunicação, aproveitando o plano de
+          encaminhamento de dados do MPLS. Esta abordagem destaca-se por várias
+          características distintivas quando comparada a redes MPLS
           convencionais sem SR.
         </p>
 
@@ -170,7 +170,7 @@
           <p class="description">Fonte: Linux³</p>
         </div>
 
-        <h3>Simplificação da Configuração de Rede:</h3>
+        <u>Simplificação da Configuração de Rede:</u>
         <ul>
           <li>Facilita a implementação de Redes Privadas Virtuais (VPNs).</li>
           <li>
@@ -179,7 +179,7 @@
           </li>
         </ul>
 
-        <h3>Compatibilidade com Redes IPv6 Existentes:</h3>
+        <u>Compatibilidade com Redes IPv6 Existentes:</u>
         <ul>
           <li>
             Não utiliza técnicas MPLS, sendo totalmente compatível com redes
@@ -191,7 +191,7 @@
           </li>
         </ul>
 
-        <h3>Gestão Eficiente de Nós de Trânsito:</h3>
+        <u>Gestão Eficiente de Nós de Trânsito:</u>
         <ul>
           <li>
             Lida eficientemente com nós de trânsito que podem não suportar o
@@ -203,7 +203,7 @@
           </li>
         </ul>
 
-        <h3>Proteção Robusta e Eficiente:</h3>
+        <u>Proteção Robusta e Eficiente:</u>
         <ul>
           <li>
             Combinado com o algoritmo RLFA, suporta qualquer topologia em
@@ -212,7 +212,7 @@
           <li>Supera as limitações da proteção convencional em túneis.</li>
         </ul>
 
-        <h3>Otimização do Tráfego em Caminhos IPv6:</h3>
+        <u>Otimização do Tráfego em Caminhos IPv6:</u>
         <ul>
           <li>
             Facilita a otimização do tráfego nos caminhos de encaminhamento
@@ -230,48 +230,62 @@
           <img src="./ipv6.png" alt="" />
           <p class="description">Fonte: researchgate⁴</p>
         </div>
+        <ul>
+          <li>
+            <p>
+              <u>Estrutura do Pacote IPv6:</u>
+              Um pacote IPv6 padrão consiste em um cabeçalho IPv6 convencional,
+              cabeçalhos estendidos (0..n) e o payload.
+            </p>
+          </li>
+          <li>
+            <p>
+              <u>Adição do Segment Routing Header (SRH):</u>
+              Para implementar o SRv6, é necessário adicionar uma extensão
+              específica chamada Segment Routing Header (SRH). O SRH especifica
+              um caminho e armazena uma lista de informações de segmentos IPv6.
+            </p>
+          </li>
 
-        <h3>Estrutura do Pacote IPv6:</h3>
-        <p>
-          Um pacote IPv6 padrão consiste em um cabeçalho IPv6 convencional,
-          cabeçalhos estendidos (0..n) e o payload.
-        </p>
+          <li>
+            <p>
+              <u>Lista de Segmentos no SRH:</u>
+              A lista de segmentos no SRH é codificada na extensão do cabeçalho,
+              sendo planejada pela fonte. Essa lista funciona de maneira análoga
+              ao SR MPLS, indicando os segmentos pelos quais o pacote deve
+              passar.
+            </p>
+          </li>
 
-        <h3>Adição do Segment Routing Header (SRH):</h3>
-        <p>
-          Para implementar o SRv6, é necessário adicionar uma extensão
-          específica chamada Segment Routing Header (SRH). O SRH especifica um
-          caminho e armazena uma lista de informações de segmentos IPv6.
-        </p>
+          <li>
+            <p>
+              <u>Codificação da Lista de Segmentos:</u>
+              A lista de segmentos pode ser baseada em protocolos de roteamento
+              interno (IGP) ou no protocolo de gateway de borda (BGP),
+              oferecendo flexibilidade na definição do caminho.
+            </p>
+          </li>
 
-        <h3>Lista de Segmentos no SRH:</h3>
-        <p>
-          A lista de segmentos no SRH é codificada na extensão do cabeçalho,
-          sendo planejada pela fonte. Essa lista funciona de maneira análoga ao
-          SR MPLS, indicando os segmentos pelos quais o pacote deve passar.
-        </p>
+          <li>
+            <p>
+              <u>Atualização Gradual da Tecnologia:</u>
+              Uma característica notável é a capacidade de operar com ou sem SR,
+              permitindo uma adoção gradual da tecnologia. Não é necessária uma
+              atualização em toda a rede, possibilitando a convivência
+              harmoniosa de dispositivos compatíveis com SRv6 e aqueles que não
+              o suportam.
+            </p>
+          </li>
 
-        <h3>Codificação da Lista de Segmentos:</h3>
-        <p>
-          A lista de segmentos pode ser baseada em protocolos de roteamento
-          interno (IGP) ou no protocolo de gateway de borda (BGP), oferecendo
-          flexibilidade na definição do caminho.
-        </p>
-
-        <h3>Atualização Gradual da Tecnologia:</h3>
-        <p>
-          Uma característica notável é a capacidade de operar com ou sem SR,
-          permitindo uma adoção gradual da tecnologia. Não é necessária uma
-          atualização em toda a rede, possibilitando a convivência harmoniosa de
-          dispositivos compatíveis com SRv6 e aqueles que não o suportam.
-        </p>
-
-        <h3>Encaminhamento com Base nas Informações do SRH:</h3>
-        <p>
-          A entrada do SRH é adicionada ao pacote IPv6 pela fonte. Cada nó de
-          trânsito, ao receber o pacote, encaminha-o com base nas informações de
-          caminho carregadas no SRH.
-        </p>
+          <li>
+            <p>
+              <u>Encaminhamento com Base nas Informações do SRH:</u>
+              A entrada do SRH é adicionada ao pacote IPv6 pela fonte. Cada nó
+              de trânsito, ao receber o pacote, encaminha-o com base nas
+              informações de caminho carregadas no SRH.
+            </p>
+          </li>
+        </ul>
 
         <p>
           Ao seguir esses passos, é possível implementar o Segment Routing IPv6

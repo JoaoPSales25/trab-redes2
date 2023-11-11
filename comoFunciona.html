@@ -85,13 +85,13 @@
 
         <ul>
           <li>
-            <strong>Label Edge Routers (LER)</strong>, responsáveis pela
-            atribuição de rótulos nos pacotes de dados
+            <u>Label Edge Routers (LER)</u>, responsáveis pela atribuição de
+            rótulos nos pacotes de dados
           </li>
 
           <li>
-            <strong>Label Switch Routers (LSR)</strong>, encarregados da
-            comutação desses rótulos ao longo do percurso do pacote.
+            <u>Label Switch Routers (LSR)</u>, encarregados da comutação desses
+            rótulos ao longo do percurso do pacote.
           </li>
         </ul>
 
@@ -125,39 +125,38 @@
         <h3>Protocolo de Controle:</h3>
         <ul>
           <li>
-            <strong>Segment Routing:</strong> Utiliza um IGP para controle,
-            simplificando o gerenciamento e evitando a necessidade de outros
-            protocolos complexos, como LDP, RSVP-TE, BGP, ou IGP.
+            <u>Segment Routing:</u> Utiliza um IGP para controle, simplificando
+            o gerenciamento e evitando a necessidade de outros protocolos
+            complexos, como LDP, RSVP-TE, BGP, ou IGP.
           </li>
           <li>
-            <strong>MPLS:</strong> Dependente de LDP, RSVP-TE, BGP e/ou IGP para
-            controle, resultando em uma configuração mais complexa.
+            <u>MPLS:</u> Dependente de LDP, RSVP-TE, BGP e/ou IGP para controle,
+            resultando em uma configuração mais complexa.
           </li>
         </ul>
 
         <h3>Distribuição das Marcações:</h3>
         <ul>
           <li>
-            <strong>Segment Routing:</strong> Adiciona uma marcação para cada
-            adjacência ou nó, independente do número de túneis, reduzindo
+            <u>Segment Routing:</u> Adiciona uma marcação para cada adjacência
+            ou nó, independente do número de túneis, reduzindo
             significativamente a demanda por recursos.
           </li>
           <li>
-            <strong>MPLS:</strong> A distribuição de marcações aumenta conforme
-            o número de túneis, demandando mais recursos.
+            <u>MPLS:</u> A distribuição de marcações aumenta conforme o número
+            de túneis, demandando mais recursos.
           </li>
         </ul>
 
         <h3>Ajustes de Caminho e Controle:</h3>
         <ul>
           <li>
-            <strong>Segment Routing:</strong> A re-computação e ajuste de
-            controle são executados pelo ingressante, simplificando o processo.
+            <u>Segment Routing:</u> A re-computação e ajuste de controle são
+            executados pelo ingressante, simplificando o processo.
           </li>
           <li>
-            <strong>MPLS:</strong> Necessidade de entrega de configurações nó a
-            nó para ajustes de caminho e controle, tornando o processo mais
-            complexo.
+            <u>MPLS:</u> Necessidade de entrega de configurações nó a nó para
+            ajustes de caminho e controle, tornando o processo mais complexo.
           </li>
         </ul>
 
