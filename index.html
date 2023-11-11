@@ -16,126 +16,84 @@
           <li>
             <a href="fundamentos.html">2. Fundamentos e Arquitetura</a>
           </li>
-        </ul>
-
-        <ul>
           <li>
             <a href="comoFunciona.html">3. Como funciona</a>
           </li>
+        </ul>
+
+        <ul>
           <li>
             <a href="vantagens.html">4. Vantagens</a>
           </li>
           <li>
             <a href="aplicacoes.html">5. Aplicações</a>
           </li>
-          <li><a href="referencias.html">6. Referências</a></li>
+          <li><a href="perguntas.html">6. Perguntas</a></li>
+          <li><a href="referencias.html">7. Referências</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="introduction">
-        <!-- <div class="imgContainer">
-          <img src="./blocosbackground.webp" alt="" />
-          <p class="description">Fonte: Época Negócios¹</p>
-        </div> -->
+        <h1>O que é o Segment Routing:</h1>
 
-        <h1>1. Introdução</h1>
-        <h2>1.1 Breve visão geral sobre o Segment Routing</h2>
-        <p>
-          O Segment Routing (SR) representa uma abordagem inovadora para o
-          roteamento de pacotes em redes de comunicação, projetada para superar
-          as limitações das tecnologias de roteamento tradicionais. Em vez de
-          depender de protocolos complexos e tabelas de encaminhamento
-          estáticas, o SR introduz o conceito de "segmentos" ou "rótulos"
-          associados aos pacotes de dados. Esses segmentos representam caminhos
-          específicos dentro da rede e permitem uma flexibilidade notável no
-          roteamento, permitindo que os pacotes sejam direcionados de forma
-          eficiente e dinâmica, adaptando-se às condições da rede em tempo real.
-        </p>
-        <p>
-          O Segment Routing simplifica a operação de rede, reduzindo a
-          complexidade do roteamento, e oferece a capacidade de programação
-          centralizada e automação, tornando a rede mais ágil e adaptável. Com
-          uma ampla gama de aplicações, desde otimização de tráfego em data
-          centers até suporte a serviços diferenciados em redes de provedores de
-          serviços, o SR está se tornando uma escolha atraente para organizações
-          que buscam melhorar o desempenho de suas redes e simplificar suas
-          operações. Sua flexibilidade, integração com protocolos existentes e
-          capacidade de adaptar-se a requisitos em constante evolução fazem do
-          Segment Routing uma tecnologia crucial na era das redes modernas.
-        </p>
-        <p>
-          O Segment Routing oferece várias vantagens em relação a outras
-          abordagens de roteamento mais comuns, como o MPLS (Multiprotocol Label
-          Switching) e o roteamento IP tradicional. Algumas das principais
-          vantagens incluem:
-        </p>
-        <p>
-          Simplificação da Arquitetura de Roteamento: Uma das vantagens mais
-          notáveis do Segment Routing é a sua capacidade de simplificar a
-          arquitetura de rede. Ao substituir protocolos complexos de roteamento
-          por segmentos ou rótulos associados a caminhos específicos, o SR reduz
-          a complexidade da rede, tornando-a mais fácil de gerenciar e manter.
-        </p>
-        <p>
-          Maior Flexibilidade: O Segment Routing oferece uma flexibilidade
-          superior no encaminhamento de pacotes. Os segmentos podem ser criados
-          dinamicamente e adaptados às necessidades específicas da rede e dos
-          serviços, permitindo uma personalização mais eficaz do roteamento.
-        </p>
-        <p>
-          Programação Centralizada: O SR possibilita a programação centralizada
-          da rede, o que significa que os administradores podem controlar e
-          ajustar o roteamento de forma mais eficiente a partir de um ponto
-          central. Isso facilita a automação e a orquestração de serviços,
-          tornando a rede mais ágil.
-        </p>
-        <p>
-          Redução da Complexidade de Encaminhamento: Ao eliminar tabelas de
-          encaminhamento extensas e complexas, o Segment Routing reduz a
-          sobrecarga de roteamento. Isso resulta em um encaminhamento mais
-          eficiente e em uma redução do consumo de recursos.
-        </p>
-        <p>
-          Suporte a Redes de Transporte Segmentadas: Como o próprio nome sugere,
-          o Segment Routing é particularmente adequado para criar redes de
-          transporte segmentadas, permitindo a diferenciação de serviços e a
-          otimização do tráfego em ambientes diversos.
-        </p>
-        <p>
-          Melhor Escalabilidade: O Segment Routing aborda problemas de
-          escalabilidade comuns em redes IP convencionais, tornando-se uma
-          solução atraente para operadoras de telecomunicações e data centers
-          que precisam lidar com um grande volume de tráfego.
-        </p>
-        <p>
-          Compatibilidade com Protocolos Existentes: O SR pode ser implementado
-          de forma gradual, coexistindo com protocolos de roteamento
-          tradicionais e MPLS. Isso permite uma transição suave para a
-          tecnologia de Segment Routing sem a necessidade de uma migração
-          completa da infraestrutura de rede.
-        </p>
-        <p>
-          Em resumo, o Segment Routing oferece uma abordagem inovadora para o
-          roteamento de pacotes, simplificando a rede, tornando-a mais flexível,
-          eficiente e adequada para as demandas em constante evolução das redes
-          modernas. Suas vantagens o tornam uma escolha atraente para
-          organizações que buscam otimizar o desempenho de suas redes e
-          simplificar suas operações.
-        </p>
+        <p>O <strong>Segment Routing (SR)</strong> é uma nova abordagem para o encaminhamento de pacotes em redes IP, introduzindo uma melhor eficiência e flexibilidade.</p>
+    
+
+        <h2>Abordagem Tradicional de Encaminhamento:</h2>
+    
+        <p>A abordagem mais comum para encaminhamento de pacotes é a <strong>hop-by-hop</strong>, que basicamente significa recalcular a rota a cada "pulo" que o pacote dá. Ou seja, cada nó da rede toma decisões independentes sobre o próximo salto para o qual o pacote deve ser enviado em direção ao seu destino final.</p>
+    
+        <p>Essa tomada de decisão é baseada em informações de roteamento, como tabelas de roteamento, e é feita ponto a ponto. Em outras palavras, cada nó examina o cabeçalho do pacote recebido, determina o próximo salto com base nas informações disponíveis e encaminha o pacote para o nó seguinte.</p>
+    
+        <p>Junto à ideia de hop-by-hop, diversos outros protocolos foram implementados para solucionar alguns problemas da rede, como o <strong>balanceamento de carga</strong>, garantia de um caminho para tráfegos específicos, entre outros, tornando muito complicada a implementação e manutenção desses protocolos.</p>
+    
+        <h2>Segment Routing:</h2>
+    
+        <p>Com isso, surge o <strong>Segment Routing</strong>, que integra-se tanto com <strong>IPv6</strong> quanto com <strong>MPLS</strong> em ambientes <strong>IPv4</strong>. O Segment Routing simplifica operações ao reduzir a dependência de protocolos complexos e pesquisas tradicionais.</p>
+    
+        <ul>
+            <li>Permite a criação de caminhos mais eficientes e específicos para determinados fluxos de tráfego, otimizando a utilização da rede.</li>
+            <li>Simplifica a operação da rede, reduzindo a sobrecarga de sinalização e aumentando a visibilidade e o controle globais sobre o encaminhamento.</li>
+        </ul>
+    
+        <p>No protocolo <strong>Segment Routing</strong>, um <strong>segmento</strong> refere-se a um componente identificado por um <strong>Segment Identifier (SID)</strong>, que faz parte de um caminho específico que um pacote deve seguir através da rede. Cada segmento representa uma instrução, um ponto de encaminhamento ou uma função específica ao longo do caminho de roteamento, com isso, é possível criar um caminho com instruções personalizadas.</p>
+    
+        <h3>Benefícios do Segment Routing:</h3>
+    
+        <ul>
+            <li>Maior controle: O SR proporciona controle detalhado sobre os caminhos de encaminhamento, permitindo que os nós de origem especifiquem explicitamente o percurso desejado.</li>
+            <li>Simplicidade: É possível reduzir a complexidade operacional ao simplificar as operações, manutenção e solução de problemas na rede.</li>
+            <li>**Eficiência de Encaminhamento:** Oferece caminhos mais eficientes, adaptados às necessidades da aplicação, otimizando o uso dos recursos da rede.</li>
+            <li>**Flexibilidade na Engenharia de Tráfego:** Facilita a engenharia de tráfego, possibilitando a definição dinâmica de caminhos específicos para diferentes tipos de tráfego.</li>
+            <li>Redução de Sinalização: Minimiza a sobrecarga de sinalização na rede, simplificando o encaminhamento sem extensas trocas de mensagens de roteamento.</li>
+            <li>Integração com MPLS: Pode ser integrado com MPLS, proporcionando aprimoramento e coexistência suave com infraestruturas existentes.</li>
+        </ul>
+    
+        <h2>Tipos de Segmentos:</h2>
+    
+        <ol>
+            <li><u>Nó:</u> Representa um nó individual na rede, que possui numeração única. Esse segmento é utilizado para direcionar um pacote diretamente para um nó específico ao longo do caminho de roteamento por segmentos.</li>
+            <li><u>Adjacência:</u> Refere-se a um tipo específico de segmento utilizado para representar a ligação direta entre dois nós consecutivos na rede. Esse segmento é projetado para simplificar o encaminhamento de pacotes entre nós vizinhos ao longo do caminho de roteamento por segmentos.</li>
+            <li><u>Local:</u> Existe apenas como um nó local, tendo uma SID apenas para sua FIB.</li>
+        </ol>
+        <p>Após esse breve introdução do Segment Routing, apresentando um pouco de como ele funciona e de suas qualidades, vamos nos aprofundar e entender um pouco mais esse protocolo de rede.</p>
+
+      </div>
       </section>
       <div class="rodapeContainer">
         <p class="rodape">
           ¹Disponível em:
-          <!-- <a
+          <a
             class="link"
-            href="https://epocanegocios.globo.com/Tudo-sobre/noticia/2022/05/blockchain-o-que-e-como-funciona-e-para-que-serve-entenda-seo22.html"
+            href="https://www.fstelecom.com.br/descubra-a-funcionabilidade-de-uma-estrutura-de-redes/"
           >
-            https://epocanegocios.globo.com/Tudo-sobre/noticia/2022/05/blockchain-o-que-e-como-funciona-e-para-que-serve-entenda-seo22.html
-          </a> -->
+            https://www.fstelecom.com.br/descubra-a-funcionabilidade-de-uma-estrutura-de-redes/
+          </a>
         </p>
       </div>
     </main>
+
     <footer>
       <p>Copyright © 2023. All rights reserved.</p>
     </footer>
