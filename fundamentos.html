@@ -33,111 +33,296 @@
       </nav>
     </header>
     <main>
-      <section id="blockchain-fundamentals">
-        <h1>2. Como funciona</h1>
-        <h2>2.1 Segmentos e sua função na arquitetura do Segment Routing.</h2>
+      <section id="fundamentals">
+        <h1>2. Fundamentos e Arquitetura</h1>
 
-        <p>
-          Os segmentos no contexto do Segment Routing (SR) são um
-          componente-chave que define caminhos específicos em uma rede. Eles
-          representam trechos da rede que um pacote de dados deve percorrer, e
-          são identificados por segment identifiers (SIDs). Cada segmento pode
-          representar um roteador, um conjunto de roteadores ou um serviço
-          específico. A importância dos segmentos no SR reside na sua capacidade
-          de criar caminhos personalizados e flexíveis, permitindo um controle
-          preciso sobre o roteamento dos pacotes em uma rede. Isso oferece
-          benefícios significativos, como a otimização do tráfego, a
-          diferenciação de serviços e a simplificação do gerenciamento de rede.
-        </p>
-        <p>
-          Os segmentos permitem uma forma inovadora de roteamento, em que os pacotes de dados podem ser encaminhados ao longo de caminhos predeterminados, direcionados por meio de SIDs. Isso elimina a necessidade de protocolos complexos de roteamento e tabelas de encaminhamento estáticas, simplificando a arquitetura de rede. Além disso, a flexibilidade dos segmentos torna possível criar caminhos segmentados com base em requisitos específicos, como a minimização da latência, a maximização da largura de banda ou a aplicação de políticas de QoS.
-
-        </p>
-        <p>
-          Os segmentos desempenham um papel central na capacidade do SR de se adaptar rapidamente a mudanças nas condições da rede e nos requisitos de serviço. Eles permitem a programação centralizada, o que significa que os administradores de rede podem controlar o roteamento de forma eficaz a partir de um ponto central, facilitando a automação e a orquestração de serviços. Em resumo, os segmentos são os blocos de construção fundamentais do Segment Routing, capacitando a arquitetura a oferecer eficiência, flexibilidade e escalabilidade em redes modernas.	
-        </p>
-
-        <h2>2.2 Componentes-chave da arquitetura, como os nós e os segmentos de encaminhamento</h2>
-
-        <p>
-          Em uma rede que utiliza Segment Routing (SR), a conexão entre segmentos e nós é fundamental para o funcionamento eficaz da arquitetura. Cada nó SR atua como um ponto de encaminhamento inteligente, onde os pacotes são direcionados com base em segmentos específicos, que são identificadores de caminhos ou funções na rede. Esses segmentos, associados a um determinado nó, representam destinos ou ações específicas a serem alcançadas. Quando um pacote ingressa em um nó SR, a tabela de encaminhamento SR no nó é consultada para determinar o próximo segmento a ser alcançado, direcionando o pacote para o nó ou link correspondente. Assim, a conexão entre segmentos e nós permite que os pacotes sigam trajetórias definidas com precisão, otimizando o roteamento, a diferenciação de serviços e a automação na rede.
-        </p>
-        <h2>
-          2.3 Tipos de segmentos (uniponto, multiponto, etc.).
-        </h2>
-        <p>
-
-          Uniponto se refere a uma forma de comunicação em que a informação é transmitida de um único ponto de origem para um único ponto de destino. É como uma conversa direta entre duas pessoas, onde uma pessoa fala e a outra escuta, sem envolver terceiros.
-
-        </p>
-        <p>
-          Já Multiponto envolve uma transmissão de um único ponto de origem para múltiplos pontos de destino. Isso significa que um único emissor envia informações que podem ser recebidas por várias pessoas ao mesmo tempo, como uma estação de rádio que transmite músicas para muitos ouvintes.
-Temos também o Multiponto a Multiponto, Nesse caso, a comunicação ocorre de vários pontos de origem para vários pontos de destino. Muitas pessoas podem enviar e receber informações simultaneamente, criando uma rede complexa de comunicação, como em videoconferências em grupo.
-
-        </p>
-        <h2>
-         2.4 Função dos nós intermediários na rede com Segment Routing
-
-        </h2>
-        <p>
-          Os nós intermediários desempenham um papel vital em uma rede que utiliza o Segment Routing (SR). Sua principal função é direcionar o tráfego de pacotes por meio da rede de acordo com os segmentos identificados nos cabeçalhos dos pacotes. Isso permite que os pacotes sigam caminhos específicos e otimizados, contribuindo para a eficiência do roteamento. Além disso, esses nós têm a capacidade de segmentar pacotes maiores em segmentos menores, se necessário, e de recompor pacotes segmentados, garantindo que os segmentos sejam entregues na ordem correta ao destino final.
-
-        </p>
-        <p>
-          Uma das tarefas fundamentais dos nós intermediários é o gerenciamento das tabelas de encaminhamento SR. Cada nó mantém sua própria tabela de encaminhamento que contém informações sobre como direcionar pacotes com base nos segmentos específicos presentes nos pacotes. Os nós atualizam e consultam essas tabelas continuamente, tomando decisões de roteamento com base nessas informações.
-        </p>
-        <p>
-          Além disso, os nós intermediários têm um papel importante no controle de políticas de roteamento. Eles podem aplicar políticas específicas à medida que os pacotes passam por eles, o que possibilita a implementação de restrições, priorização de tráfego, aplicação de políticas de Qualidade de Serviço (QoS) e outras ações de controle relacionadas ao tráfego.
-
-        </p>
-        <p>
-          Esses nós também podem executar funções específicas relacionadas aos segmentos de função, como aplicar serviços de firewall, balanceamento de carga, otimização de tráfego e outras ações personalizadas definidas pelos segmentos de função. Isso torna os nós intermediários elementos-chave na diferenciação de serviços e na otimização do tráfego.
-
-        </p>
-        <p>
-          Por fim, os nós intermediários têm a capacidade de detectar falhas na rede e encaminhar pacotes por caminhos de proteção em caso de problemas. Isso melhora a confiabilidade da rede, garantindo que o tráfego seja redirecionado adequadamente quando ocorrem interrupções. Em suma, os nós intermediários são componentes essenciais na operação do Segment Routing, contribuindo para um roteamento eficiente, flexível e controlado na rede.
-
-        </p>
-<!--         
         <div class="imgContainer">
-          <img src="./howitworks.webp" alt="" />
-          <p class="description">Fonte: LiveCoins¹</p>
-        </div> -->
-
-        
-        <!-- <div class="imgContainer">
-          <img src="./powpos.png" alt="" />
-          <p class="description">Fonte: CoinDesk³</p>
+          <img src="./planos.png" alt="" />
+          <p class="description">Fonte: Autoral</p>
         </div>
-      </section> -->
+
+        <ul>
+          <li>Plano de serviços: Possui a mesma diversidade de serviços</li>
+          <li>
+            Plano de controle (software): OSPF/IS-IS/BGP são usados para definir
+            fluxo.
+          </li>
+          <li>Plano de dados (hardware): reusa MPLS e IPv6.</li>
+        </ul>
+
+        <h2>Plano de Controle X Plano de Dados</h2>
+
+        <h3>Plano de Controle:</h3>
+        <ul>
+          <li>Representa a espinha dorsal da inteligência da rede.</li>
+          <li>
+            Tomada de decisões estratégicas para o encaminhamento de pacotes.
+          </li>
+          <li>Utilização de protocolos de roteamento para otimização.</li>
+        </ul>
+
+        <h3>Plano de Dados:</h3>
+        <ul>
+          <li>Camada operacional para encaminhamento efetivo de pacotes.</li>
+          <li>
+            Execução de instruções previamente estabelecidas pelo Plano de
+            Controle.
+          </li>
+          <li>Garantia de que os pacotes alcancem seu destino final.</li>
+        </ul>
+
+        <h2>Bloco Global de Roteamento por Segmentos (SRGB)</h2>
+
+        <p>
+          <strong>SRGB (Segment Routing Global Block):</strong> Rótulos
+          exclusivos para segmentos de Nó (também chamados de globais, dada sua
+          validade absoluta em um domínio de SR). A atribuição de rótulos no
+          SRGB pode ser realizada dentro da faixa de valores compreendida entre
+          16000 e 1048575. A estrutura do rótulo é construída pela combinação do
+          prefixo SID com a base do SRGB. Por exemplo, um roteador com prefixo
+          SID 105 e um SRGB igual a 16000, possui rótulo 16105.
+        </p>
+
+        <div class="imgContainer">
+          <img src="./SIDs.png" alt="" />
+          <p class="description">Fonte: GTA Ufrj¹</p>
+        </div>
+
+        <h2>Plano de Controle IGP do SR: IS-IS e OSPF</h2>
+
+        <p>
+          <strong>Plano de Controle IGP (Interior Gateway Protocol):</strong>
+          Desempenha um papel crucial no Segment Routing (SR), sendo responsável
+          pela configuração e distribuição dos segmentos.
+        </p>
+
+        <h3>IS-IS:</h3>
+        <ul>
+          <li>Suporte para IPv4 e IPv6.</li>
+          <li>
+            Roteamento para múltiplos níveis de rede (nível 1 e nível 2 do
+            IS-IS).
+          </li>
+          <li>
+            Utiliza o prefixo do Segment Identifier (SID) para representar as
+            interfaces loopback dos roteadores em ambas as versões de IP.
+          </li>
+          <li>
+            Emprega os Segmentos de Adjacência para identificar as adjacências
+            dos nós, enquanto o anúncio do prefixo para o SID é realizado pelo
+            servidor de mapeamento (Mapping Server).
+          </li>
+        </ul>
+
+        <h3>OSPF:</h3>
+        <ul>
+          <li>
+            Versão que incorpora extensões para Segment Routing é o OSPFv2.
+          </li>
+          <li>Implementação suporta a estrutura multi-área.</li>
+          <li>
+            Utiliza o prefixo de SID para representar as interfaces loopback dos
+            roteadores em IPv4.
+          </li>
+          <li>
+            Segmentos de Adjacência são empregados para identificar as
+            adjacências do nó.
+          </li>
+        </ul>
+
+        <h2>Plano de Dados em Redes MPLS com Segment Routing (SR)</h2>
+
+        <div class="imgContainer">
+          <img src="./mplscircuito.png" alt="" />
+          <p class="description">Fonte: huawei²</p>
+        </div>
+
+        <p>
+          <strong>Redes MPLS com Segment Routing (SR):</strong> Representam uma
+          evolução significativa na arquitetura de comunicação, aproveitando o
+          plano de encaminhamento de dados do MPLS. Esta abordagem destaca-se
+          por várias características distintivas quando comparada a redes MPLS
+          convencionais sem SR.
+        </p>
+
+        <h3>Vantagens:</h3>
+        <ul>
+          <li>
+            Eliminação da necessidade de Túneis de Engenharia de Tráfego (TE)
+            adicionais.
+          </li>
+          <li>
+            Presença de estados apenas no head-end do TE em redes MPLS com SR
+            oferece vantagens significativas em termos de gerenciabilidade.
+          </li>
+          <li>Otimização do caminho de backup.</li>
+          <li>Interoperabilidade com a rede MPLS tradicional.</li>
+          <li>Design orientado para Redes Definidas por Software (SDN).</li>
+
+          <li>Utilização de IGP para FRR em 50ms.</li>
+          <li>
+            Uso exclusivo de Equal-Cost Multi-Path (ECMP) para a criação de
+            túneis TE.
+          </li>
+        </ul>
+
+        <h2>Redes IPv6 com SR</h2>
+
+        <div class="imgContainer">
+          <img src="./ipv6circuito.png" alt="" />
+          <p class="description">Fonte: Linux³</p>
+        </div>
+
+        <h3>Simplificação da Configuração de Rede:</h3>
+        <ul>
+          <li>Facilita a implementação de Redes Privadas Virtuais (VPNs).</li>
+          <li>
+            Simplifica as configurações de rede, tornando o processo mais
+            acessível.
+          </li>
+        </ul>
+
+        <h3>Compatibilidade com Redes IPv6 Existentes:</h3>
+        <ul>
+          <li>
+            Não utiliza técnicas MPLS, sendo totalmente compatível com redes
+            IPv6 já em operação.
+          </li>
+          <li>
+            Nós precisam apenas suportar encaminhamento IPv6, dispensando a
+            necessidade de suporte a encaminhamento MPLS.
+          </li>
+        </ul>
+
+        <h3>Gestão Eficiente de Nós de Trânsito:</h3>
+        <ul>
+          <li>
+            Lida eficientemente com nós de trânsito que podem não suportar o
+            SRv6.
+          </li>
+          <li>
+            Encaminhamento de pacotes IPv6 com SRH pelas rotas para garantir a
+            continuidade do serviço.
+          </li>
+        </ul>
+
+        <h3>Proteção Robusta e Eficiente:</h3>
+        <ul>
+          <li>
+            Combinado com o algoritmo RLFA, suporta qualquer topologia em
+            teoria.
+          </li>
+          <li>Supera as limitações da proteção convencional em túneis.</li>
+        </ul>
+
+        <h3>Otimização do Tráfego em Caminhos IPv6:</h3>
+        <ul>
+          <li>
+            Facilita a otimização do tráfego nos caminhos de encaminhamento
+            IPv6.
+          </li>
+          <li>
+            SIDs com vários tipos de serviço permitem planejar caminhos
+            explícitos flexíveis na entrada para ajustar o tráfego do serviço.
+          </li>
+        </ul>
+
+        <h2>Implementação do Segment Routing IPv6 (SRv6)</h2>
+
+        <div class="imgContainer">
+          <img src="./ipv6.png" alt="" />
+          <p class="description">Fonte: researchgate⁴</p>
+        </div>
+
+        <h3>Estrutura do Pacote IPv6:</h3>
+        <p>
+          Um pacote IPv6 padrão consiste em um cabeçalho IPv6 convencional,
+          cabeçalhos estendidos (0..n) e o payload.
+        </p>
+
+        <h3>Adição do Segment Routing Header (SRH):</h3>
+        <p>
+          Para implementar o SRv6, é necessário adicionar uma extensão
+          específica chamada Segment Routing Header (SRH). O SRH especifica um
+          caminho e armazena uma lista de informações de segmentos IPv6.
+        </p>
+
+        <h3>Lista de Segmentos no SRH:</h3>
+        <p>
+          A lista de segmentos no SRH é codificada na extensão do cabeçalho,
+          sendo planejada pela fonte. Essa lista funciona de maneira análoga ao
+          SR MPLS, indicando os segmentos pelos quais o pacote deve passar.
+        </p>
+
+        <h3>Codificação da Lista de Segmentos:</h3>
+        <p>
+          A lista de segmentos pode ser baseada em protocolos de roteamento
+          interno (IGP) ou no protocolo de gateway de borda (BGP), oferecendo
+          flexibilidade na definição do caminho.
+        </p>
+
+        <h3>Atualização Gradual da Tecnologia:</h3>
+        <p>
+          Uma característica notável é a capacidade de operar com ou sem SR,
+          permitindo uma adoção gradual da tecnologia. Não é necessária uma
+          atualização em toda a rede, possibilitando a convivência harmoniosa de
+          dispositivos compatíveis com SRv6 e aqueles que não o suportam.
+        </p>
+
+        <h3>Encaminhamento com Base nas Informações do SRH:</h3>
+        <p>
+          A entrada do SRH é adicionada ao pacote IPv6 pela fonte. Cada nó de
+          trânsito, ao receber o pacote, encaminha-o com base nas informações de
+          caminho carregadas no SRH.
+        </p>
+
+        <p>
+          Ao seguir esses passos, é possível implementar o Segment Routing IPv6
+          com eficácia, aproveitando as extensões do cabeçalho IPv6 para inserir
+          as informações necessárias de roteamento e possibilitar a criação de
+          caminhos explícitos e personalizados na rede IPv6. Essa abordagem
+          oferece uma flexibilidade notável e suporte para a evolução gradual
+          das redes para essa tecnologia inovadora.
+        </p>
+      </section>
       <div class="rodapeContainer">
-          <!-- <p class="rodape">
-            ¹Disponível em:
-            <a
-              class="link"
-              href="https://livecoins.com.br/blockchain-descomplicado/"
-            >
-              https://livecoins.com.br/blockchain-descomplicado/
-            </a>
-          </p>
-          <p class="rodape">
-            ²Disponível em:
-            <a
-              class="link"
-              href="https://www.dicionariofinanceiro.com/blockchain/"
-            >
-              https://www.dicionariofinanceiro.com/blockchain/
-            </a>
-          </p>
-          <p class="rodape">
-            ³Disponível em:
-            <a
-              class="link"
-              href="https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/"
-            >
-              https://www.coindesk.com/sponsored-content/proof-of-stake-a-stake-through-proof-of-works-heart/
-            </a>
-          </p> -->
+        <p class="rodape">
+          ¹Disponível em:
+          <a
+            class="link"
+            href="https://www.gta.ufrj.br/ensino/eel879/vf/segrtg/comofunciona.html"
+          >
+            https://www.gta.ufrj.br/ensino/eel879/vf/segrtg/comofunciona.html
+          </a>
+        </p>
+
+        <p class="rodape">
+          ²Disponível em:
+          <a
+            class="link"
+            href="https://support.huawei.com/enterprise/en/doc/EDOC1000173015/3ee10304/understanding-segment-routing-mpls"
+          >
+            https://support.huawei.com/enterprise/en/doc/EDOC1000173015/3ee10304/understanding-segment-routing-mpls
+          </a>
+        </p>
+        <p class="rodape">
+          ³Disponível em:
+          <a
+            class="link"
+            href="https://www.researchgate.net/figure/Segment-routing-header-extension-for-IPv6_fig3_348078969"
+          >
+            https://www.researchgate.net/figure/Segment-routing-header-extension-for-IPv6_fig3_348078969
+          </a>
+        </p>
+        <p class="rodape">
+          ⁴Disponível em:
+          <a
+            class="link"
+            href="https://wiki.fd.io/view/VPP/Segment_Routing_for_IPv6"
+          >
+            https://wiki.fd.io/view/VPP/Segment_Routing_for_IPv6
+          </a>
+        </p>
       </div>
     </main>
     <footer>
