@@ -63,7 +63,7 @@
           dinâmicas do ambiente de rede atual.
         </p>
 
-        <h2>Multi-Protocol Label Switching or MPLS</h2>
+        <h2>Multi-Protocol Label Switching (MPLS)</h2>
 
         <div class="imgContainer">
           <img src="./rede mpls.png" alt="" />
@@ -191,32 +191,77 @@
           operacional.
         </p>
 
-        <h2>Implementação do Segment Routing IPv6 baseado em IPv6</h2>
+        <h2>Implementação do Segment Routing IPv6 (SRv6)</h2>
 
-        <p>
-          Um pacote IPv6 consiste em um cabeçalho IPv6 normal, cabeçalhos
-          extendidos (0..n), e o payload. Para implementar o
-          <strong>Segment Routing IPv6 (SRv6)</strong> baseado no plano de
-          encaminhamento IPv6, é necessário uma extensão do cabeçalho IPv6,
-          chamada de <strong>Segment Routing Header (SRH)</strong>, é
-          adicionada. Um SRH especifica um caminho e armazena uma lista de
-          informações de segmentos IPv6. O conteúdo da lista de segmentos IPv6
-          funciona da mesma forma que o SR MPLS. A entrada adiciona um SRH ao
-          pacote IPv6, e cada nó de trânsito encaminha o pacote baseado nas
-          informações de caminho carregadas no SRH.
-        </p>
-
+        <div class="imgContainer">
+          <img src="./ipv6.png" alt="" />
+          <p class="description">Fonte: researchgate⁴</p>
+        </div>
         <ul>
           <li>
-            A lista de segmentos está codificada na extensão do cabeçalho para
-            roteamento pela fonte;
+            <p>
+              <u>Estrutura do Pacote IPv6:</u>
+              Um pacote IPv6 padrão consiste em um cabeçalho IPv6 convencional,
+              cabeçalhos estendidos (0..n) e o payload.
+            </p>
           </li>
-          <li>A lista de segmentos pode ser baseada no IGP ou BGP;</li>
           <li>
-            Não necessita de atualização de toda a rede, pode operar com ou sem
-            SR, possibitando a adoção gradual da tecnologia.
+            <p>
+              <u>Adição do Segment Routing Header (SRH):</u>
+              Para implementar o SRv6, é necessário adicionar uma extensão
+              específica chamada Segment Routing Header (SRH). O SRH especifica
+              um caminho e armazena uma lista de informações de segmentos IPv6.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <u>Lista de Segmentos no SRH:</u>
+              A lista de segmentos no SRH é codificada na extensão do cabeçalho,
+              sendo planejada pela fonte. Essa lista funciona de maneira análoga
+              ao SR MPLS, indicando os segmentos pelos quais o pacote deve
+              passar.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <u>Codificação da Lista de Segmentos:</u>
+              A lista de segmentos pode ser baseada em protocolos de roteamento
+              interno (IGP) ou no protocolo de gateway de borda (BGP),
+              oferecendo flexibilidade na definição do caminho.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <u>Atualização Gradual da Tecnologia:</u>
+              Uma característica notável é a capacidade de operar com ou sem SR,
+              permitindo uma adoção gradual da tecnologia. Não é necessária uma
+              atualização em toda a rede, possibilitando a convivência
+              harmoniosa de dispositivos compatíveis com SRv6 e aqueles que não
+              o suportam.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <u>Encaminhamento com Base nas Informações do SRH:</u>
+              A entrada do SRH é adicionada ao pacote IPv6 pela fonte. Cada nó
+              de trânsito, ao receber o pacote, encaminha-o com base nas
+              informações de caminho carregadas no SRH.
+            </p>
           </li>
         </ul>
+
+        <p>
+          Ao seguir esses passos, é possível implementar o Segment Routing IPv6
+          com eficácia, aproveitando as extensões do cabeçalho IPv6 para inserir
+          as informações necessárias de roteamento e possibilitar a criação de
+          caminhos explícitos e personalizados na rede IPv6. Essa abordagem
+          oferece uma flexibilidade notável e suporte para a evolução gradual
+          das redes para essa tecnologia inovadora.
+        </p>
 
         <div class="imgContainer">
           <img src="./ipv6 x mpls.png" alt="" />
