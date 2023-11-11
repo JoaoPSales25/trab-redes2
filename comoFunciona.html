@@ -165,39 +165,27 @@
         </ul>
 
         <p>
-          <strong>Segment Routing</strong> delineia de maneira precisa a
-          trajetória que um pacote deve percorrer na rede. Em termos mais
-          simplificados, esses segmentos representam as instruções que orientam
-          o pacote em sua jornada em direção ao destino desejado. Uma observação
-          crucial é que, neste contexto, o estado completo de encaminhamento do
-          fluxo de tráfego reside no próprio pacote, não na infraestrutura de
-          rede.
+          Segment Routing delineia de maneira precisa a trajetória que um pacote
+          deve percorrer na rede. Em termos mais simplificados, esses segmentos
+          representam as instruções que orientam o pacote em sua jornada em
+          direção ao destino desejado. Uma observação crucial é que, neste
+          contexto, o <strong>estado completo de encaminhamento</strong> do
+          fluxo de tráfego reside no <strong>próprio pacote</strong>, não na
+          infraestrutura de rede.
         </p>
 
         <p>
-          O <strong>Segment Routing (SR)</strong> opera de maneira análoga às
-          redes IP/MPLS tradicionais, onde o empilhamento de rótulos MPLS
-          delineia a rota específica que o pacote deve seguir, manifestando-se
-          como uma lista de segmentos no cabeçalho do pacote. No SR, a notável
-          ausência de estados por fluxo nos roteadores intermediários é uma
-          característica proeminente, pois utiliza exclusivamente o
-          <strong>Protocolo de Gateway Interno (IGP)</strong>, dispensando assim
-          a necessidade do protocolo de distribuição de rótulos (LDP) típico em
-          redes IP/MPLS convencionais.
+          O roteador de origem no Segment Routing, detém o
+          <strong> conhecimento de todos os identificadores (SIDs) </strong>
+          necessários para atingir o destino. Isso implica que os estados por
+          fluxo são mantidos apenas na origem, simplificando a gestão da rede. A
+          quantidade de entradas na tabela SR-FIB em qualquer nó específico é
+          determinada pela soma do <strong>numero de segmentos</strong> com o
+          <strong>numero de segmentos adjascentes.</strong>
         </p>
 
         <p>
-          O roteador de origem, por sua vez, detém o conhecimento de todos os
-          identificadores (SIDs) necessários para atingir o destino. Isso
-          implica que os estados por fluxo são mantidos apenas na origem,
-          simplificando a gestão da rede. A quantidade de entradas na tabela
-          SR-FIB em qualquer nó específico é determinada pela soma de N + A,
-          onde N representa o número de Segmentos de Nó e A é o número de
-          Segmentos de Adjacências.
-        </p>
-
-        <p>
-          Um conceito relevante no <strong>Segment Routing</strong> é o "<strong
+          Um conceito relevante no Segment Routing é o "<strong
             >segmento ativo</strong
           >", que varia de acordo com a natureza da rede. Nas redes MPLS, o
           segmento ativo é representado pelo rótulo mais externo, enquanto nas
@@ -233,6 +221,11 @@
             SR, possibitando a adoção gradual da tecnologia.
           </li>
         </ul>
+
+        <div class="imgContainer">
+          <img src="./ipv6 x mpls.png" alt="" />
+          <p class="description">Fonte: Huawei³</p>
+        </div>
       </section>
       <div class="rodapeContainer">
         <p class="rodape">
@@ -251,6 +244,15 @@
             href="https://support.huawei.com/enterprise/br/doc/EDOC1100270080/e1707d39/understanding-mpls"
           >
             https://support.huawei.com/enterprise/br/doc/EDOC1100270080/e1707d39/understanding-mpls
+          </a>
+        </p>
+        <p class="rodape">
+          ²Disponível em:
+          <a
+            class="link"
+            href="https://info.support.huawei.com/info-finder/encyclopedia/en/G-SRv6.html"
+          >
+            https://info.support.huawei.com/info-finder/encyclopedia/en/G-SRv6.html
           </a>
         </p>
       </div>
