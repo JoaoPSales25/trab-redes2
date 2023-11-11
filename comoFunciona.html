@@ -34,112 +34,225 @@
     </header>
     <main>
       <section id="related-technologies-and-protocols">
-        <h1>3. Como funciona
-        </h1>
-        <h2>3.1 Integração do Segment Routing com protocolos de roteamento tradicionais (por exemplo, OSPF e BGP).
-          
-          </h2>
-          <h3>3.1.1 Integração com OSPF (Open Shortest Path First):</h3>
-        <p>
-          O OSPF é um protocolo de roteamento interno altamente confiável e eficaz usado para determinar os caminhos mais curtos dentro de uma rede. Ele calcula esses caminhos com base em métricas específicas, como largura de banda, atraso e custo. No entanto, em redes onde a granularidade do roteamento precisa ser aprimorada para atender a requisitos específicos, a integração com o Segment Routing se torna uma solução atraente.
+        <h1>COMO FUNCIONA</h1>
 
-
-        </p>
+        <div class="imgContainer">
+          <img src="./foto redes complexas.jpg" alt="" />
+          <p class="description">Fonte: fstelecom¹</p>
+        </div>
         <p>
-          Nesse cenário, o Segment Routing é utilizado para criar segmentos de encaminhamento dinâmicos. Cada segmento representa um trecho específico do caminho de um pacote através da rede. A criação desses segmentos pode ser baseada em políticas de roteamento ou em necessidades em tempo real, como a otimização da qualidade de serviço (QoS) para aplicativos críticos. Em vez de depender de tabelas de encaminhamento estáticas, a rede determina dinamicamente como o tráfego será roteado com base em segmentos definidos de maneira flexível.
-
-        </p>
-        <p>
-          Essa integração permite que as redes continuem a se beneficiar das vantagens de escalabilidade e estabilidade do OSPF, ao mesmo tempo em que adicionam a capacidade de definir caminhos de encaminhamento altamente personalizados. Isso é particularmente valioso em ambientes de redes de data center, onde as necessidades de balanceamento de carga, recuperação de desastres e otimização de tráfego podem ser muito específicas.
-
-        </p>
-        
-        <h3>3.1.2 Integração com BGP (Border Gateway Protocol):</h2>
-        <p>
-          O BGP é um protocolo de roteamento externo fundamental para redes de provedores de serviços de Internet, onde a troca de rotas entre sistemas autônomos é essencial. No entanto, em redes de grande escala, a flexibilidade do BGP pode ser estendida com o uso do Segment Routing.
-        </p>
-        <p>
-          A integração do Segment Routing com o BGP envolve a definição de segmentos de encaminhamento que podem ser anunciados como parte das atualizações de roteamento do BGP. Esses segmentos representam caminhos personalizados através da rede e podem ser usados para otimizar o roteamento do tráfego com base em políticas específicas da rede. Isso é particularmente valioso quando se trata de roteamento de tráfego entre sistemas autônomos, onde as decisões de roteamento precisam ser altamente personalizadas para atender às demandas variadas dos clientes e dos serviços.
-
-        </p>
-        <p>
-          A integração do Segment Routing com o BGP proporciona um maior controle sobre o roteamento do tráfego, o que é essencial em redes de provedores de serviços de Internet e ambientes complexos onde a personalização das rotas é uma prioridade. Permite uma otimização mais refinada do desempenho e da utilização de recursos em redes de grande porte.
-
-        </p>
-        
-        
-        <h2>3.2 MPLS (Multiprotocol Label Switching) e sua relação com o Segment Routing.
-        </h2>
-        <p>
-          MPLS (Multiprotocol Label Switching) é uma tecnologia de encaminhamento que utiliza rótulos (labels) para direcionar o tráfego de forma eficiente em redes de computadores. Esses rótulos são, essencialmente, identificadores numéricos usados para instruir os dispositivos de rede sobre como encaminhar os pacotes. Quando um pacote ingressa na rede, recebe um rótulo, que é trocado conforme o pacote atravessa os dispositivos de rede. Isso ocorre até que o pacote alcance seu destino. No contexto do MPLS, os rótulos funcionam como marcadores de caminho, determinando o curso dos pacotes.
+          O cenário das redes atual é impulsionado por novas e diversas demandas
+          empresariais, tais como a necessidade de otimizar a utilização de cada
+          elo da rede, garantir <strong>alto desempenho</strong>, alcançar
+          <strong>escalabilidade</strong>, <strong>flexibilidade</strong>,
+          <strong>alta disponibilidade</strong>, além da simplificação das
+          operações, entre outros aspectos. Essa mudança nos requisitos destaca
+          a urgência de adotar abordagens baseadas em software para automatizar
+          e gerenciar as redes, ou seja, permitir que o
+          <strong>software defina a estrutura da rede</strong>. Em resposta a
+          essa exigência, surgiu a arquitetura de
+          <strong>roteamento por segmento</strong>.
         </p>
 
         <p>
-         
-MPLS é composto por dois tipos principais de roteadores: Label Edge Routers (LER), que são responsáveis por atribuir rótulos aos pacotes, e Label Switch Routers (LSR), que realizam a comutação dos rótulos. Para ilustrar, imagine que os LERs são como as portas de entrada para a rede e os LSRs como as estações intermediárias no trajeto dos pacotes. A tecnologia MPLS inicia e termina em um LER, e, em cenários de redes VPN, o LER é chamado de Provider Edge, pois realiza a pesquisa de rotas IP. Os LSRs, por outro lado, retransmitem os pacotes com rótulos MPLS e realizam a pesquisa desses rótulos.
-
+          A evolução do roteamento por segmento teve sua origem no
+          <strong>Multiprotocol Label Switching (MPLS)</strong>. Para
+          compreender o MPLS, é crucial ter uma compreensão sólida do roteamento
+          IP. No contexto do roteamento IP, um conjunto de protocolos é
+          responsável por determinar a rota que um pacote deve seguir, desde sua
+          origem até o destino, atravessando uma série de roteadores em diversas
+          redes. Essa interconexão complexa destaca a importância de abordagens
+          inovadoras, como o roteamento por segmento, para atender às exigências
+          dinâmicas do ambiente de rede atual.
         </p>
+
+        <h2>Multi-Protocol Label Switching or MPLS</h2>
+
+        <div class="imgContainer">
+          <img src="./rede mpls.png" alt="" />
+          <p class="description">Fonte: Huawei²</p>
+        </div>
+
         <p>
-          Em um ambiente MPLS, um pacote é encaminhado usando rótulos de fluxo (Flow Labels), que são adicionados aos pacotes que entram na rede, geralmente originados em uma rede não-MPLS, como uma LAN. Cada roteador na rede mantém sua própria tabela de roteamento, enquanto os LERs possuem uma tabela de encaminhamento de rótulos (Label Forwarding Table), que associa rótulos a endereços IP de destino.
+          O <strong>Multi-Protocol Label Switching</strong>, conhecido como
+          MPLS, representa um mecanismo de encaminhamento que se baseia em
+          rótulos. Esses rótulos, simples números binários, são utilizados pela
+          tabela de encaminhamento do dispositivo receptor para determinar a
+          interface de saída em direção ao próximo salto. O procedimento
+          consiste na troca do rótulo de entrada pelo rótulo de saída,
+          encaminhando o pacote para o próximo dispositivo ao longo da rede.
+          Esse processo é repetido sequencialmente até que o pacote alcance seu
+          destino final. Para a eficácia do MPLS, são implementados dois tipos
+          distintos de roteadores:
         </p>
-    <p>
-      A necessidade de maior flexibilidade e controle sobre o comportamento da rede, em oposição a uma infraestrutura de rede IP pura, deu origem ao Segment Routing (SR). O MPLS oferece vantagens em termos de flexibilidade, permitindo que políticas de roteamento personalizadas sejam implementadas com mais facilidade e que pacotes sigam caminhos predefinidos com base em rótulos específicos. No entanto, o MPLS também traz consigo um aumento nos custos de manutenção devido a um plano de controle mais complexo.
 
-    </p>
-    <p>
-      
-O Segment Routing, por outro lado, introduz uma arquitetura de roteamento mais flexível e escalável, tornando-se menos complexo de operar do que as abordagens tradicionais do MPLS e do roteamento IP. O SR não requer a implementação de protocolos adicionais, como LDP ou RSVP-TE, e utiliza um protocolo de controle IGP para distribuir as marcações e calcular caminhos, o que economiza recursos.
+        <ul>
+          <li>
+            <strong>Label Edge Routers (LER)</strong>, responsáveis pela
+            atribuição de rótulos nos pacotes de dados
+          </li>
 
-    </p>
-    <p>
-      
-Para simplificar, o Segment Routing é uma evolução do MPLS, onde os rótulos MPLS são usados como segmentos de encaminhamento, permitindo maior controle e flexibilidade no roteamento do tráfego. Essa abordagem melhora a eficiência e a adaptabilidade da rede, ao mesmo tempo em que reduz a complexidade operacional em comparação com as soluções puramente baseadas em MPLS.
+          <li>
+            <strong>Label Switch Routers (LSR)</strong>, encarregados da
+            comutação desses rótulos ao longo do percurso do pacote.
+          </li>
+        </ul>
 
-    </p>
-        <h2>3.3 Outros protocolos que podem ser usados em conjunto com o Segment Routing.
-        </h2>
-       
-        <h3>3.3.1 ISIS (Intermediate System to Intermediate System):</h3>
         <p>
-          O ISIS é um protocolo de roteamento que pode ser usado em conjunto com o Segment Routing para determinar caminhos e segmentos de encaminhamento. Assim como o OSPF, o ISIS é frequentemente empregado para estabelecer segmentos de encaminhamento. Ele fornece uma alternativa ao OSPF em ambientes onde a coexistência de diferentes protocolos é necessária ou desejável.
-
+          A manutenção de um plano de controle mais complexo no contexto do MPLS
+          resulta em custos elevados. Uma solução eficaz para mitigar esses
+          desafios é interconectar todos os nós da rede a um controlador,
+          estabelecendo uma comunicação através de um protocolo comum. Com isso,
+          a gestão é simplificada, concentrando-se apenas no roteador de origem
+          ou no controlador, conferindo à infraestrutura maior programabilidade
+          e escalabilidade. Essa abordagem deu origem à
+          <strong>arquitetura de roteamento por segmento</strong>, a qual se
+          destaca por sua notável flexibilidade, escalabilidade aprimorada,
+          menor complexidade e facilidade operacional em comparação com as
+          abordagens de Roteamento IP ou MPLS.
         </p>
-        <h3>3.3.2 RSVP-TE (Resource Reservation Protocol with Traffic Engineering):</h3>
+
+        <h2>Segment Routing (SR)</h2>
+
         <p>
-          O RSVP-TE é um protocolo que se concentra na engenharia de tráfego e no estabelecimento de caminhos de tráfego explicitamente definidos. Quando usado em conjunto com o Segment Routing, o RSVP-TE pode aprimorar o gerenciamento de recursos da rede. Ele permite a reserva de recursos específicos para o tráfego, garantindo que a qualidade de serviço (QoS) seja mantida, o que é especialmente importante em redes com requisitos estritos de desempenho.
+          <strong>Segment Routing (SR)</strong> apresenta diversas vantagens
+          significativas quando comparado a outros protocolos MPLS, como LDP e
+          RSVP-TE. Uma das principais distinções reside na eliminação da
+          necessidade de implementar LDP ou RSVP-TE no roteamento por segmentos.
+          Em vez disso, o SR utiliza um Protocolo de Gateway Interno (IGP) para
+          a distribuição de marcações e o cálculo de caminhos, tudo isso sem a
+          necessidade de modificar a arquitetura MPLS existente. O SR destaca-se
+          em vários aspectos:
         </p>
 
-        <h3>3.3.3 LDP (Label Distribution Protocol):</h3>
+        <h3>Protocolo de Controle:</h3>
+        <ul>
+          <li>
+            <strong>Segment Routing:</strong> Utiliza um IGP para controle,
+            simplificando o gerenciamento e evitando a necessidade de outros
+            protocolos complexos, como LDP, RSVP-TE, BGP, ou IGP.
+          </li>
+          <li>
+            <strong>MPLS:</strong> Dependente de LDP, RSVP-TE, BGP e/ou IGP para
+            controle, resultando em uma configuração mais complexa.
+          </li>
+        </ul>
+
+        <h3>Distribuição das Marcações:</h3>
+        <ul>
+          <li>
+            <strong>Segment Routing:</strong> Adiciona uma marcação para cada
+            adjacência ou nó, independente do número de túneis, reduzindo
+            significativamente a demanda por recursos.
+          </li>
+          <li>
+            <strong>MPLS:</strong> A distribuição de marcações aumenta conforme
+            o número de túneis, demandando mais recursos.
+          </li>
+        </ul>
+
+        <h3>Ajustes de Caminho e Controle:</h3>
+        <ul>
+          <li>
+            <strong>Segment Routing:</strong> A re-computação e ajuste de
+            controle são executados pelo ingressante, simplificando o processo.
+          </li>
+          <li>
+            <strong>MPLS:</strong> Necessidade de entrega de configurações nó a
+            nó para ajustes de caminho e controle, tornando o processo mais
+            complexo.
+          </li>
+        </ul>
+
         <p>
-          O LDP é um protocolo comumente associado ao MPLS (Multiprotocol Label Switching). É usado para distribuir rótulos MPLS na rede. Em ambientes que implementam o Segment Routing sobre MPLS, o LDP pode coexistir com o Segment Routing. Nesse cenário, o LDP pode ser usado para distribuir rótulos MPLS, que também podem ser usados como segmentos de encaminhamento no Segment Routing. Isso permite que redes aproveitem os benefícios do MPLS e do Segment Routing simultaneamente.
+          <strong>Segment Routing</strong> delineia de maneira precisa a
+          trajetória que um pacote deve percorrer na rede. Em termos mais
+          simplificados, esses segmentos representam as instruções que orientam
+          o pacote em sua jornada em direção ao destino desejado. Uma observação
+          crucial é que, neste contexto, o estado completo de encaminhamento do
+          fluxo de tráfego reside no próprio pacote, não na infraestrutura de
+          rede.
         </p>
 
-        <h3>3.3.4 EIGRP (Enhanced Interior Gateway Routing Protocol):</h3>
         <p>
-          O EIGRP é um protocolo de roteamento interno desenvolvido pela Cisco. Embora seja menos comum do que OSPF ou BGP, ele pode ser integrado com o Segment Routing. O EIGRP oferece recursos avançados, como a capacidade de criar caminhos personalizados e otimizados para o tráfego. Ao combinar o EIGRP com o Segment Routing, as redes podem personalizar ainda mais o roteamento e o encaminhamento do tráfego, especialmente em ambientes onde o EIGRP já é a escolha de protocolo de roteamento.
+          O <strong>Segment Routing (SR)</strong> opera de maneira análoga às
+          redes IP/MPLS tradicionais, onde o empilhamento de rótulos MPLS
+          delineia a rota específica que o pacote deve seguir, manifestando-se
+          como uma lista de segmentos no cabeçalho do pacote. No SR, a notável
+          ausência de estados por fluxo nos roteadores intermediários é uma
+          característica proeminente, pois utiliza exclusivamente o
+          <strong>Protocolo de Gateway Interno (IGP)</strong>, dispensando assim
+          a necessidade do protocolo de distribuição de rótulos (LDP) típico em
+          redes IP/MPLS convencionais.
         </p>
 
-       
+        <p>
+          O roteador de origem, por sua vez, detém o conhecimento de todos os
+          identificadores (SIDs) necessários para atingir o destino. Isso
+          implica que os estados por fluxo são mantidos apenas na origem,
+          simplificando a gestão da rede. A quantidade de entradas na tabela
+          SR-FIB em qualquer nó específico é determinada pela soma de N + A,
+          onde N representa o número de Segmentos de Nó e A é o número de
+          Segmentos de Adjacências.
+        </p>
+
+        <p>
+          Um conceito relevante no <strong>Segment Routing</strong> é o "<strong
+            >segmento ativo</strong
+          >", que varia de acordo com a natureza da rede. Nas redes MPLS, o
+          segmento ativo é representado pelo rótulo mais externo, enquanto nas
+          redes IPv6, é um ponteiro para o SID. Essa abordagem inovadora
+          proporciona uma gestão mais eficiente e flexível do encaminhamento de
+          pacotes, simplificando a arquitetura da rede e aprimorando a agilidade
+          operacional.
+        </p>
+
+        <h2>Implementação do Segment Routing IPv6 baseado em IPv6</h2>
+
+        <p>
+          Um pacote IPv6 consiste em um cabeçalho IPv6 normal, cabeçalhos
+          extendidos (0..n), e o payload. Para implementar o
+          <strong>Segment Routing IPv6 (SRv6)</strong> baseado no plano de
+          encaminhamento IPv6, é necessário uma extensão do cabeçalho IPv6,
+          chamada de <strong>Segment Routing Header (SRH)</strong>, é
+          adicionada. Um SRH especifica um caminho e armazena uma lista de
+          informações de segmentos IPv6. O conteúdo da lista de segmentos IPv6
+          funciona da mesma forma que o SR MPLS. A entrada adiciona um SRH ao
+          pacote IPv6, e cada nó de trânsito encaminha o pacote baseado nas
+          informações de caminho carregadas no SRH.
+        </p>
+
+        <ul>
+          <li>
+            A lista de segmentos está codificada na extensão do cabeçalho para
+            roteamento pela fonte;
+          </li>
+          <li>A lista de segmentos pode ser baseada no IGP ou BGP;</li>
+          <li>
+            Não necessita de atualização de toda a rede, pode operar com ou sem
+            SR, possibitando a adoção gradual da tecnologia.
+          </li>
+        </ul>
       </section>
       <div class="rodapeContainer">
-        <!-- <p class="rodape">
+        <p class="rodape">
           ¹Disponível em:
           <a
             class="link"
-            href="https://academy.bit2me.com/pt/que-es-un-arbol-merkle/"
+            href="https://www.fstelecom.com.br/descubra-a-funcionabilidade-de-uma-estrutura-de-redes/"
           >
-            https://academy.bit2me.com/pt/que-es-un-arbol-merkle/
+            https://www.fstelecom.com.br/descubra-a-funcionabilidade-de-uma-estrutura-de-redes/
           </a>
         </p>
         <p class="rodape">
           ²Disponível em:
           <a
             class="link"
-            href="https://www.jusbrasil.com.br/artigos/smart-contract-uma-analise-juridica/580862497"
+            href="https://support.huawei.com/enterprise/br/doc/EDOC1100270080/e1707d39/understanding-mpls"
           >
-            https://www.jusbrasil.com.br/artigos/smart-contract-uma-analise-juridica/580862497
+            https://support.huawei.com/enterprise/br/doc/EDOC1100270080/e1707d39/understanding-mpls
           </a>
-        </p> -->
+        </p>
       </div>
     </main>
     <footer>
